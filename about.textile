@@ -1,16 +1,14 @@
 ---
-title: About Michael Bleigh
+title: About Mark Turner
 layout: master
 ---
 
-h2. About Michael Bleigh
+h2. About Mark Turner
 
-Michael Bleigh is the author of this blog as well as a Rubyist, designer, and open source advocate. He is currently the Creative Director and Open-Source Activist at "Intridea":http://www.intridea.com/, a Washington D.C. based web applications development firm.
+Mark Turner is the author of this blog as well as a Rubyist, System Administrator, open source advocate and all around geek. He is currently the IT Director at "Western Communications":http://bendbulletin.com/apps/pbcs.dll/article?AID=/99999999/ABOUT/50830001/1044&nav_category=ABOUT, an Oregon based Newspaper publishing company. 
 
-Michael has contributed a number of open-source projects to the Ruby community including the "SubdomainFu":http://github.com/mbleigh/subdomain-fu and "ActsAsTaggableOn":http://github.com/mbleigh/acts-as-taggable-on plugins for Rails. He was also chosen to speak at RailsConf Europe 2008 as well as the Great Lakes Ruby Bash in 2008.
-
-His work at Intridea has included being the product manager and technical lead for "Present.ly":http://www.presentlyapp.com/, the business micro-communications platform launched in September of 2008.
+Mark has an extensive past in the information technology world for network & system administration to software engineering and project management. He speaks at a number of local tech groups on topics ranging from Unix/Linux to "Git":http://git-scm.com/. He currently focuses on developing innovative solutions to the complex problems the newspaper industry is facing.  
 
 h2. About This Site
 
-This site is built using the "Jekyll":http://github.com/mojombo/jekyll library and hosted on "GitHub":http://github.com/. The source code used to create this library is "publicly available on GitHub":http://github.com/mbleigh/mbleigh.github.com as well.
+This site is built using the "Jekyll":http://github.com/mojombo/jekyll library and hosted on "GitHub":http://github.com/. The source code used to create this library is "publicly available on GitHub":http://github.com/amerine/amerine.github.com as well.
