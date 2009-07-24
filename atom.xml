@@ -5,7 +5,7 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Mark Turner</title>
- <link href="http://amerine.github.com/atom.xml" rel="self"/>
+ <link href="http://amerine.net/atom.xml" rel="self"/>
  <link href="http://www.amerine.net/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://www.amerine.net/</id>
@@ -16,7 +16,7 @@ layout: nil
  
  {% for post in site.posts %}
  <entry>
-   <title>{{ post.title }}</title>
+   <title>{{ post.title | xml_escape }}</title>
    <link href="http://www.amerine.net{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://amerine.net{{ post.id }}</id>
