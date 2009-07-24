@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   letter-spacing: -0.05em;
-  background: #210;
+  background: #595d5c;
   color: #353B40;
 }
 
@@ -28,7 +28,7 @@ a:visited {
 #header {
   text-transform: lowercase;
   text-align: left;
-  background: #421;
+  background: #303445;
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
   -moz-border-radius-topright: 1em;
@@ -56,7 +56,7 @@ a:visited {
 }
 
 #menu {
-  background: #310;
+  background: #4e608f;
 }
 
 #menu ul {
@@ -93,12 +93,12 @@ a:visited {
 }
 
 span.date {
-  background: #484;
+  background: #8e8140;
   display: block;
   padding: 0.4em 0.6em 0.3em;
   font-weight: bold;
   color: white;
-  border-bottom: 3px solid #262;
+  border-bottom: 3px solid #344;
   float: left;
 }
 
@@ -163,7 +163,7 @@ div.related {
 
 #footer {
   margin-bottom: 2em;
-  color: #dba;
+  color: #dedddb;
   font-size: 0.9em;
   padding: 0.5em;
   text-align: center;
@@ -174,9 +174,9 @@ div.related {
 }
 
 #content .home_box h2 {
-  background: #484;
+  background: #8e8140;
   padding: 0.3em 0.5em;
-  border-bottom: 3px solid #262;
+  border-bottom: 3px solid #344;
   margin-bottom: 0em;
   color: white;
 }
@@ -198,7 +198,7 @@ div.related {
 .clearfix { clear: both;}
 
 #footer a {
-  color: #ecb;
+  color: #a5b1ef;
   font-weight: normal;
 }
 
