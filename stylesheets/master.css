@@ -93,7 +93,7 @@ a:visited {
 }
 
 span.date {
-  background: #8e8140;
+  background: #5c8e82;
   display: block;
   padding: 0.4em 0.6em 0.3em;
   font-weight: bold;
@@ -174,7 +174,7 @@ div.related {
 }
 
 #content .home_box h2 {
-  background: #8e8140;
+  background: #5c8e82;
   padding: 0.3em 0.5em;
   border-bottom: 3px solid #344;
   margin-bottom: 0em;
