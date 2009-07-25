@@ -5,7 +5,7 @@ layout: master
 
 h2. About Mark Turner
 
-Mark Turner is the author of this blog as well as a Rubyist, System Administrator, open source advocate and all around geek. He is currently the IT Director at "Western Communications":http://bendbulletin.com/apps/pbcs.dll/article?AID=/99999999/ABOUT/50830001/1044&nav_category=ABOUT, an Oregon based Newspaper publishing company. 
+Mark Turner is the author of this blog as well as a Rubyist, System Administrator, open source advocate and all around geek. He is currently the IT Director at "Western Communications":http://www.bendbulletin.com/apps/pbcs.dll/article?AID=/99999999/ABOUT/50830001/1044&nav_category=ABOUT, an Oregon based Newspaper publishing company. 
 
 Mark has an extensive past in the information technology world for network & system administration to software engineering and project management. He speaks at a number of local tech groups on topics ranging from Unix/Linux to "Git":http://git-scm.com/. He currently focuses on developing innovative solutions to the complex problems the newspaper industry is facing.  
 
