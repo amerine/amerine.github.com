@@ -1,0 +1,33 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://amerine.net</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	  <loc>http://amerine.net/blog.html</loc>
+	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	  <changefreq>daily</changefreq>
+	</url>
+	<url>
+	  <loc>http://amerine.net/about.html</loc>
+	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	  <changefreq>weekly</changefreq>
+	</url>
+	<url>
+	  <loc>http://amerine.net/open-source.html</loc>
+	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	  <changefreq>daily</changefreq>
+	</url>
+	{% for post in site.posts %}
+	<url>
+	  <loc>http://amerine.net/{{post.url}}</loc>
+	  <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+	  <changefreq>weekly</changefreq>
+	</url>
+	{% endfor %}
+</urlset>
