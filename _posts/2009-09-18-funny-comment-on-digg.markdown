@@ -14,12 +14,10 @@ Here it is for public consumption:
 >
 >I watched this while eating my breakfast of U.S. Department of Agriculture-inspected food and taking the drugs which have been determined as safe by the U.S. Food and Drug Administration.
 >
->At the appropriate time, as regulated by the U.S. Congress and kept accurate by the National Institute of Standards and Technology and the U.S. Naval Observatory, I get into my National Highway Traffic Safety Administration-approved automobile and set out to work on the roads build by the local, state, and federal Departments of Transportation, possibly stopping to purchase additional fuel of a quality level
-determined by the Environmental Protection Agency, using legal tender issued by the Federal Reserve Bank.
+>At the appropriate time, as regulated by the U.S. Congress and kept accurate by the National Institute of Standards and Technology and the U.S. Naval Observatory, I get into my National Highway Traffic Safety Administration-approved automobile and set out to work on the roads build by the local, state, and federal Departments of Transportation, possibly stopping to purchase additional fuel of a quality level determined by the Environmental Protection Agency, using legal tender issued by the Federal Reserve Bank.
 >
 >On the way out the door I deposit any mail I have to be sent out via the U.S. Postal Service and drop the kids off at the public school.
 >
->After spending another day not being maimed or killed at work thanks to the workplace regulations imposed by the Department of Labor and the Occupational Safety and Health administration, enjoying another two meals which again do not kill me because of the USDA, I drive my NHTSA car back home on the DOT roads, to my house which has not burned down in my absence because of the state and local building codes and Fire Marshal's inspection, and which has not been plundered of all its
-valuables thanks to the local police department.
+>After spending another day not being maimed or killed at work thanks to the workplace regulations imposed by the Department of Labor and the Occupational Safety and Health administration, enjoying another two meals which again do not kill me because of the USDA, I drive my NHTSA car back home on the DOT roads, to my house which has not burned down in my absence because of the state and local building codes and Fire Marshal's inspection, and which has not been plundered of all its valuables thanks to the local police department.
 >
 >And then I log on to the internet -- which was developed by the Defense Advanced Research Projects Administration -- and post on Freerepublic.com and Fox News forums about how SOCIALISM in medicine is BAD because the government can't do anything right.
