@@ -20,7 +20,7 @@ pfexec pkg install SUNWsvn
 pfexec pkg install SUNWcurl
 {% endhighlight %}
 ### git ###
-`curl` is required to build `git` don't skip install `SUNWcurl` from above.
+`curl` is required to build `git` don't skip installing `SUNWcurl` from above.
 
 Note: There seems to be an issue with building versions of git newer than 1.6.0.6 on OpenSolaris 2009.06. I'll figure out why but in the meantime I've provided instructions for installing git 1.6.0.6. Please verify that `/usr/local/bin` is in your `$PATH`.
 
