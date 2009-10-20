@@ -13,30 +13,30 @@ We want to install some of the GNU stack including `gmake`, `gcc` and git + subv
 
 ### gmake, gcc, subversion and curl ###
 Commands:
-
-	pfexec pkg install SUNWgmake
-	pfexec pkg install SUNWgcc
-	pfexec pkg install SUNWsvn
-	pfexec pkg install SUNWcurl
-	
+{% highlight bash %}
+pfexec pkg install SUNWgmake
+pfexec pkg install SUNWgcc
+pfexec pkg install SUNWsvn
+pfexec pkg install SUNWcurl
+{% endhighlight %}
 ### git ###
 `curl` is required to build `git` don't skip install `SUNWcurl` from above.
 
 Note: There seems to be an issue with building versions of git newer than 1.6.0.6 on OpenSolaris 2009.06. I'll figure out why but in the meantime I've provided instructions for installing git 1.6.0.6. Please verify that `/usr/local/bin` is in your `$PATH`.
 
 Commands:
-
-	pfexec mkdir -p /opt/src
-	pfexec chmod 777 /opt/src
-	cd /opt/src
-	wget http://kernel.org/pub/software/scm/git/git-1.6.0.6.tar.gz
-	tar xzf git-1.6.0.6.tar.gz
-	git-1.6.0.6
-	./configure
-	gmake
-	pfexec make install 
-	git --version
-	
+{% highlight bash %}
+pfexec mkdir -p /opt/src
+pfexec chmod 777 /opt/src
+cd /opt/src
+wget http://kernel.org/pub/software/scm/git/git-1.6.0.6.tar.gz
+tar xzf git-1.6.0.6.tar.gz
+git-1.6.0.6
+./configure
+gmake
+pfexec make install 
+git --version
+{% endhighlight %}
 ## Apache Stack (AMP) ##
 Like I noted above, OpenSolaris has a meta-package we can install that will take care of most of this. It will install the following packages for us:
 
@@ -45,106 +45,107 @@ Like I noted above, OpenSolaris has a meta-package we can install that will take
 * PHP 5.2.9
 
 Commands:
-
-	pfexec pkg install amp
-	
+{% highlight bash %}
+pfexec pkg install amp
+{% endhighlight %}
 ### Enable Apache & MySQL Services ###
 By default the Apache and MySQL services are not enabled. To turn them on run the following commands:
 
 Apache 2:
-
-	pfexec svcadm enable http:apache22
-	
+{% highlight bash %}
+pfexec svcadm enable http:apache22
+{% endhighlight %}
 MySQL
-
-	pfexec svcadm enable mysql
-	
+{% highlight bash %}
+pfexec svcadm enable mysql
+{% endhighlight %}
 
 ## Ruby & Ruby on Rails ##
 First we are going to use the Sun provided Ruby 1.8.7 package that also installs rubygems. Then we will update rubygems, install the gemcutter gem, add http://gems.github.com as a gem source (for legacy purposes), install the rails gems and finally modify our path to include the gem binaries. 
-
-	pfexec pkg install SUNWruby18
-	pfexec gem update --system
-	pfexec gem install gemcutter
-	gem tumble
-	gem sources -a http://gems.github.com
-	pfexec gem install rails
-	echo 'export PATH=/usr/ruby/1.8/bin:$PATH' >> ~/.profile
-	echo 'export PATH=/var/ruby/1.8/gem_home/bin:$PATH' >> ~/.profile
+{% highlight bash %}
+pfexec pkg install SUNWruby18
+pfexec gem update --system
+pfexec gem install gemcutter
+gem tumble
+gem sources -a http://gems.github.com
+pfexec gem install rails
+echo 'export PATH=/usr/ruby/1.8/bin:$PATH' >> ~/.profile
+echo 'export PATH=/var/ruby/1.8/gem_home/bin:$PATH' >> ~/.profile
+{% endhighlight %}
 (Note: Modifying .profile requires you to re-login to the machine, as it's only read during that point. If you like you can add that same line to your .bashrc file)
 
 ### Install Database Gems ###
 Mysql:
-
-	pfexec gem install mysql -- --with-mysql-dir=/usr/mysql/5.1
-	
+{% highlight bash %}
+pfexec gem install mysql -- --with-mysql-dir=/usr/mysql/5.1
+{% endhighlight %}	
 sqlite3
-
-	pfexec gem install sqlite3-ruby
-	
+{% highlight bash %}
+pfexec gem install sqlite3-ruby
+{% endhighlight %}	
 	
 ## Passenger Installation ###
 We need to install fastthread and passenger, then configure apache to use it. We're going to install passenger from source as it fixes a bug with the use of PTHREAD_STACK_MIN (See [here](http://code.google.com/p/phusion-passenger/issues/detail?id=369)) This is fixed in passenger 2.2.6 and I will update this when that is released. 
-
-	pfexec gem install fastthread
-	cd /opt/src
-	git clone git://github.com/FooBarWidget/passenger.git
-	cd passenger
-	pfexec ./bin/passenger-install-apache2-module
-	
+{% highlight bash %}
+pfexec gem install fastthread
+cd /opt/src
+git clone git://github.com/FooBarWidget/passenger.git
+cd passenger
+pfexec ./bin/passenger-install-apache2-module
+{% endhighlight %}	
 ### Apache Configuration ###
 We're going to keep the passenger configuration in it's own file to keep the httpd.conf clean.
 
 Create the file:
-
-	touch /etc/apache2/2.2/conf.d/passenger.conf
-	
+{% highlight bash %}
+touch /etc/apache2/2.2/conf.d/passenger.conf
+{% endhighlight %}	
 Paste the lines from the passenger-install-apache2-module command in that file. My file contains the following:
-
-	LoadModule passenger_module /opt/src/passenger/ext/apache2/mod_passenger.so
-	PassengerRoot /opt/src/passenger
-	PassengerRuby /usr/ruby/1.8/bin/ruby
-
+{% highlight bash %}
+LoadModule passenger_module /opt/src/passenger/ext/apache2/mod_passenger.so
+PassengerRoot /opt/src/passenger
+PassengerRuby /usr/ruby/1.8/bin/ruby
+{% endhighlight %}
 ## Let's Test ##
 Lets create a little rails app to verify that rails and passenger 
-
-	pfexec mkdir -p /data/apps
-	pfexec chown -R mturner:staff /data/apps
-	cd /data/apps
-	rails test
-	cd test
-	./script/generate controller helloworld index
-	pfexec chown -R webservd:webservd test
-	
+{% highlight bash %}
+pfexec mkdir -p /data/apps
+pfexec chown -R mturner:staff /data/apps
+cd /data/apps
+rails test
+cd test
+./script/generate controller helloworld index
+pfexec chown -R webservd:webservd test
+{% endhighlight %}	
 Lets add a vhost config for apache. 
-	
-	pfexec vim /etc/apache2/2.2/conf.d/test-site.conf
-	
+{% highlight bash %}
+pfexec vim /etc/apache2/2.2/conf.d/test-site.conf
+{% endhighlight %}	
 Here is the contents of my file:
+{% highlight bash %}
+<VirtualHost *:80>
+     ServerName test-site.com
+     DocumentRoot /data/apps/test/public
 
-	<VirtualHost *:80>
-	     ServerName test-site.com
-	     DocumentRoot /data/apps/test/public
+     <Directory /data/apps/test>
+      Options +FollowSymLinks -SymLinksIfOwnerMatch +MultiViews -Indexes -ExecCGI
+      AllowOverride ALL
+      Order allow,deny
+      Allow from all
+     </Directory>
 
-	     <Directory /data/apps/test>
-	      Options +FollowSymLinks -SymLinksIfOwnerMatch +MultiViews -Indexes -ExecCGI
-	      AllowOverride ALL
-	      Order allow,deny
-	      Allow from all
-	     </Directory>
-
-	</VirtualHost>
-
+</VirtualHost>
+{% endhighlight %}
 Add the `127.0.0.1 test-site.com` to `/etc/hosts`
 	
 Restart Apache
-
-	pfexec svcadm restart http:apache22
-	
+{% highlight bash %}
+pfexec svcadm restart http:apache22
+{% endhighlight %}	
 Test the site in apache and you see the following:
+{% highlight ruby %}
+Helloworld#index
 
-	Helloworld#index
-
-	Find me in app/views/helloworld/index.html.erb
-
+Find me in app/views/helloworld/index.html.erb
+{% endhighlight %}
 It Works!!
