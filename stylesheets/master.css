@@ -246,3 +246,7 @@ code {
 .float-right { float: right; }
 
 a img { border: 0; }
+
+#ad-block {
+	float: right;
+}

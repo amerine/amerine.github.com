@@ -10,6 +10,8 @@ xterm-color: Unknown terminal type
 
 Its easy enough to change the terminal declaration in the preference dialog... but why not teach Solaris 9 to handle the xterm-color terminal type? 
 
+{% include ad-block.markdown %}
+
 This assumes you have the sun freeware tools installed in /usr/sfw/bin.
 
 
