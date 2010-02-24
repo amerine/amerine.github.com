@@ -2,7 +2,7 @@
 title: "Fix Rails 3.0 `gem_original_require': no such file to load -- set (LoadError)"
 layout: post
 ---
-I was assisting aridlous on #railsbridge while he was experiencing an issue launching the rails console in a Rails 3.0 beta app. 
+I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app. 
 
 He was getting the following error:
 {% highlight bash %}
