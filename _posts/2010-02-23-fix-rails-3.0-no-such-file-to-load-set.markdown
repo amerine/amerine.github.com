@@ -1,0 +1,44 @@
+--- 
+title: "Fix Rails 3.0 `gem_original_require': no such file to load -- set (LoadError)"
+layout: post
+---
+I was assisting aridlous on #railsbridge while he was experiencing an issue launching the rails console in a Rails 3.0 beta app. 
+
+He was getting the following error:
+{% highlight bash %}
+$ script/console
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- set (LoadError)
+	from /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/resolver.rb:1
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:95:in `specs'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:81:in `specs_for'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:18:in `setup'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler.rb:66:in `setup'
+	from /Users/User/dev/sekret/config/../config/preinitializer.rb:34
+	from /Users/User/dev/sekret/config/boot.rb:28:in `load'
+	from /Users/User/dev/sekret/config/boot.rb:28:in `preinitialize'
+	from /Users/User/dev/sekret/config/boot.rb:10:in `boot!'
+	from /Users/User/dev/sekret/config/boot.rb:129
+	from script/console:2:in `require'
+	from script/console:2
+{% endhighlight %}
+
+This appears to only affect folks using RVM and Bundler. 
+
+After a little sleuthing it appeared that RVM was setting a blank `GEM_HOME` environment variable when you leave the ruby version set to default. 
+{% highlight bash %}
+$  env | grep GEM_HOME
+GEM_HOME=
+{% endhighlight %}
+
+There are two easy fixes
+
+1) `unset GEM_HOME`
+ or
+2) `rvm system`
+
+Both of these clear the `GEM_HOME` environment variable. 
+
+aridlous dug around the bundler src after I helped him out and came back with the following tib-bit. I'd write a patch and probably will but I'm just too tired at the moment. 
+
+>interesting, but the bug seems to be possibly 2 things: empty GEM_HOME should not be used, and when the join occurs I think it is creating an invalid GEM_PATH=":/Users/User/.gem/ruby/1.8:/opt/local/lib/ruby/gems/1.8:" ... it should not have that leading ':'
