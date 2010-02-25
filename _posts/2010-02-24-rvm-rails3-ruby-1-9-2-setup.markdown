@@ -18,10 +18,10 @@ $ rvm-install
 {% endhighlight %}
 
 ###Install Ruby 1.9.2 HEAD (i.e. latest development code)
-> Note: You're readline directory may be in a different spot.  
+> Note: Your readline directory may be in a different spot.  
 
 {% highlight bash %}
-$ rvm install rvm install 1.9.2-head -C --enable-shared,--with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
+$ rvm install 1.9.2-head -C --enable-shared,--with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
 Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-head
 
 Running autoconf
