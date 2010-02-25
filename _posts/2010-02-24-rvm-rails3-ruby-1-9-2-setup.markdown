@@ -12,7 +12,7 @@ I'm making a few assumptions:
 
 ###Install Ruby Version Manager  
 
-{% highlight bash %}
+{% highlight console %}
 $ sudo gem install rvm
 $ rvm-install
 {% endhighlight %}
@@ -20,7 +20,7 @@ $ rvm-install
 ###Install Ruby 1.9.2 HEAD (i.e. latest development code)
 > Note: Your readline directory may be in a different spot.  
 
-{% highlight bash %}
+{% highlight console %}
 $ rvm install 1.9.2-head -C --enable-shared,--with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
 Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-head
 
@@ -49,13 +49,13 @@ ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
 
 ###Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
-{% highlight bash %}
+{% highlight console %}
 $ rvm gems create rails3beta
 $ rvm 1.9.2-head%rails3beta
 {% endhighlight %}
 
 ###Install the Rails 3.0 Gems and dependencies 
-{% highlight bash %}
+{% highlight console %}
 $ gem install sqlite3-ruby
 $ env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 $ gem install tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler i18n
@@ -64,7 +64,7 @@ $ gem install rails --pre
 
 ###Done
 Hopefully everything worked:
-{% highlight bash %}
+{% highlight console %}
 $ ruby -v
   ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
 $ rails --version

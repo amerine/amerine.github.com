@@ -5,7 +5,7 @@ layout: post
 I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app. 
 
 He was getting the following error:
-{% highlight bash %}
+{% highlight console %}
 $ script/console
 /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- set (LoadError)
 	from /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
@@ -26,7 +26,7 @@ $ script/console
 This appears to only affect folks using RVM and Bundler. 
 
 After a little sleuthing it appeared that RVM was setting a blank `GEM_HOME` environment variable when you leave the ruby version set to default. 
-{% highlight bash %}
+{% highlight console %}
 $  env | grep GEM_HOME
 GEM_HOME=
 {% endhighlight %}
@@ -44,3 +44,4 @@ aridlous dug around the bundler src after I helped him out and came back with th
 >interesting, but the bug seems to be possibly 2 things: empty GEM_HOME should not be used, and when the join occurs I think it is creating an invalid GEM_PATH=":/Users/User/.gem/ruby/1.8:/opt/local/lib/ruby/gems/1.8:" ... it should not have that leading ':'
 
 UPDATE: [Filed an issue in Bundlers issue tracker](http://github.com/carlhuda/bundler/issues/issue/133)
+UPDATE 2: [Fixed in 55509f](http://github.com/carlhuda/bundler/commit/55509f23693bb344696d1dfa7fa0f0eb2108adf6)

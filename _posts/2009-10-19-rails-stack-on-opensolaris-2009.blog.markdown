@@ -15,11 +15,11 @@ We want to install some of the GNU stack including `gmake`, `gcc` and git + subv
 
 ### gmake, gcc, subversion and curl ###
 Commands:
-{% highlight bash %}
-pfexec pkg install SUNWgmake
-pfexec pkg install SUNWgcc
-pfexec pkg install SUNWsvn
-pfexec pkg install SUNWcurl
+{% highlight console %}
+$ pfexec pkg install SUNWgmake
+$ pfexec pkg install SUNWgcc
+$ pfexec pkg install SUNWsvn
+$ pfexec pkg install SUNWcurl
 {% endhighlight %}
 ### git ###
 `curl` is required to build `git` don't skip installing `SUNWcurl` from above.
@@ -27,17 +27,17 @@ pfexec pkg install SUNWcurl
 Note: There seems to be an issue with building versions of git newer than 1.6.0.6 on OpenSolaris 2009.06. I'll figure out why but in the meantime I've provided instructions for installing git 1.6.0.6. Please verify that `/usr/local/bin` is in your `$PATH`.
 
 Commands:
-{% highlight bash %}
-pfexec mkdir -p /opt/src
-pfexec chmod 777 /opt/src
-cd /opt/src
-wget http://kernel.org/pub/software/scm/git/git-1.6.0.6.tar.gz
-tar xzf git-1.6.0.6.tar.gz
-git-1.6.0.6
-./configure
-gmake
-pfexec make install 
-git --version
+{% highlight console %}
+$ pfexec mkdir -p /opt/src
+$ pfexec chmod 777 /opt/src
+$ cd /opt/src
+$ wget http://kernel.org/pub/software/scm/git/git-1.6.0.6.tar.gz
+$ tar xzf git-1.6.0.6.tar.gz
+$ git-1.6.0.6
+$ ./configure
+$ gmake
+$ pfexec make install 
+$ git --version
 {% endhighlight %}
 ## Apache Stack (AMP) ##
 Like I noted above, OpenSolaris has a meta-package we can install that will take care of most of this. It will install the following packages for us:
