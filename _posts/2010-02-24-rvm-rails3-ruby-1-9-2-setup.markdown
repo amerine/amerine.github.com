@@ -2,7 +2,7 @@
 title: Rails 3.0 Setup using rvm & Ruby 1.9.2
 layout: post
 ---
-##Intro
+###Intro
 Some people want to start doing some Rails 3.0 Beta work on Ruby 1.9.2 on their development machines. I'm tossing this up here to have something to point people to when they have questions. 
 
 I'm making a few assumptions:  

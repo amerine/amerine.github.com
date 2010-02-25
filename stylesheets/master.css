@@ -1,3 +1,5 @@
+/* @override http://amerine.net/stylesheets/master.css */
+
 body {
   font-family: Arial, sans-serif;
   letter-spacing: -0.05em;
@@ -16,7 +18,7 @@ a:visited {
 }
 
 #wrapper {
-  width: 50em;
+  width: 960px;
   margin: 2em auto 0;
   padding: 0;
   background: #fff;
@@ -124,8 +126,8 @@ div.post {
 pre {
   background: #f8f8f8;
   border: 1px solid #E7E5DC;
-  border-width: 1px 0 4px 6px;
-  padding: 1em;
+  border-width: 4px 2px 4px 2px;
+  padding: 7px;
   overflow: auto;
   color: black;
   line-height: 120%;
@@ -187,11 +189,11 @@ div.related {
 }
 
 #home_left {
-  width: 29em;
+  width: 640px;
 }
 
 #home_right {
-  width: 16em;
+  width: 240px;
   margin-left: 1em;
 }
 
@@ -250,3 +252,4 @@ a img { border: 0; }
 #ad-block {
 	float: right;
 }
+
