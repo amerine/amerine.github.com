@@ -1,5 +1,3 @@
-/* @override http://amerine.net/stylesheets/master.css */
-
 body {
   font-family: Arial, sans-serif;
   letter-spacing: -0.05em;
@@ -210,6 +208,10 @@ code {
   font-family: "Consolas","Courier New",Courier,monospace;
 }
 
+.highlight code {
+	background: #f8f8f8;
+}
+
 .home_box .post h1 a {
   font-size: 0.7em;
 }
@@ -252,4 +254,3 @@ a img { border: 0; }
 #ad-block {
 	float: right;
 }
-
