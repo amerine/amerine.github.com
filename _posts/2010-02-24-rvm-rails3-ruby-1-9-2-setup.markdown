@@ -106,3 +106,8 @@ $ gem list
 
 ###Back to you're Rails3.0 environment
 `rvm 1.9.2-head%rails3beta`
+
+###Use you're RVM environment as your Default 
+`rvm 1.9.2-head%rails3beta --default`
+
+Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
