@@ -111,3 +111,4 @@ $ gem list
 `rvm 1.9.2-head%rails3beta --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
+
