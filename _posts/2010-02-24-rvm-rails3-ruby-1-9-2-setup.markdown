@@ -101,13 +101,13 @@ $ gem list
 	tzinfo (0.3.16)
 {% endhighlight %}
 
-###Switching back to you're system Ruby
+###Switching back to your system Ruby
 `rvm system`
 
-###Back to you're Rails3.0 environment
+###Back to your Rails3.0 environment
 `rvm 1.9.2-head%rails3beta`
 
-###Use you're RVM environment as your Default 
+###Use your RVM environment as your Default 
 `rvm 1.9.2-head%rails3beta --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
