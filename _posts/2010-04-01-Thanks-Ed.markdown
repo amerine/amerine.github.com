@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Thanks Ed"
+---
+![Ed Roberts](images/ed-roberts.jpg "Ed Roberts (1941 - 2010)")  
+
+  Ed Roberts (1941 - 2010)
+
+I was a lucky kid. I grew up with my grandparents and my mom; all of them pushed me hard to learn. They never told me what to focus on, they just did their best to embrace the things I fell in love with. One of those things was computers. If it wasn't for Ed Roberts there was no way my family could afford for me to learn how to program. 
+
+Ed cofounded MITS in 1969 and by 1975 MITS launched the Altair 8800. The Altair 8800 was the first successful personal computer (read: "They sold lots of them") and it was the computer that Microsoft developed their first commercial product for. The Altair was the computer that inspired Steve Jobs and Steve Wozniak to start a little company called Apple. By 1979 Apple has completely overshadowed MITS, but what Ed did was create the business model the PC world would follow to this day - including the concept of selling upgrades to your PC, peripherals, computer magazines, computer stores, Microsoft software and Intel CPU's.
+
+Ed jump-started the industry that changed the world and I can't imagine what we would have today if Ed didn't do what he did. 
+
+Thanks Ed. 
