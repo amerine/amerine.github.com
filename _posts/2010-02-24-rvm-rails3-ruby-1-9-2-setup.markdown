@@ -50,8 +50,8 @@ ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
 ###Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
 {% highlight console %}
-$ rvm gems create rails3beta
-$ rvm 1.9.2-head%rails3beta
+$ rvm gemset create rails3beta
+$ rvm 1.9.2-head@rails3beta
 {% endhighlight %}
 
 ###Install the Rails 3.0 Gems and dependencies 
@@ -105,10 +105,12 @@ $ gem list
 `rvm system`
 
 ###Back to your Rails3.0 environment
-`rvm 1.9.2-head%rails3beta`
+`rvm 1.9.2-head@rails3beta`
 
 ###Use your RVM environment as your Default 
-`rvm 1.9.2-head%rails3beta --default`
+`rvm 1.9.2-head@rails3beta --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
 
+####Update 04/16/2010
+Updated to reflect the recent changes in RVM.
