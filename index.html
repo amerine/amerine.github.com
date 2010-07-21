@@ -1,11 +1,12 @@
 ---
 layout: master
 title: Amerine on the Internet
+from_the_blog: 3
 ---
 
 <section id="intro">
 	<h1>Welcome</h1>
-	<p>Mark Turner is a software developer, system admin, open source advocate and all around geek. He is currently the IT Director at Western Communications, an Oregon based publisher with various publications throughout Oregon and California.</p>
+	<p>Mark Turner is a software developer, sys admin, open source advocate and all around geek. He is currently the IT Director at Western Communications, an Oregon based publisher with various publications throughout Oregon and California.</p>
 </section>
 <section id="header">
 	<h1>Latest Blog Post</h1>
@@ -22,14 +23,14 @@ title: Amerine on the Internet
 	<div class="one_quarter black">
 		<div class="title"><h2>Find me on twitter</h2></div>
 		<div class="elements">
-			<p class="tweet"><a href="#">A Surfing Icon Embraces a Mellower Wave http://nyti.ms/bSVTVW</a></p>
+			<p class="tweet"></p>
 		</div>
 		<div class="title"><h2 class="normal">Connect with me</h2></div>
 			<div class="icons">
-				<a href="http://twitter.com/amerine" class="social"><img src="/images/social_icon_twitter.png"></a>
-				<a href="http://www.flickr.com/photos/mark_turner/" class="social"><img src="/images/social_icon_flickr.png"></a>
-				<a href="http://www.linkedin.com/in/markaturner" class="social"><img src="/images/social_icon_linkedin.png"></a>
-				<a href="http://vimeo.com/amerine" class="social"><img src="/images/social_icon_vimeo.png"></a>
+				<a href="http://twitter.com/amerine" class="social"><img src="/images/social_icon_twitter.png" /></a>
+				<a href="http://www.flickr.com/photos/mark_turner/" class="social"><img src="/images/social_icon_flickr.png" /></a>
+				<a href="http://www.linkedin.com/in/markaturner" class="social"><img src="/images/social_icon_linkedin.png" /></a>
+				<a href="http://vimeo.com/amerine" class="social"><img src="/images/social_icon_vimeo.png" /></a>
 				<div class="clear"></div>
 			</div>
 		<div class="rss"><img src="/images/icon_rss.png" /><a href='http://feeds2.feedburner.com/amerine' class='float-right'>RSS Feed</a></div>
@@ -43,24 +44,22 @@ title: Amerine on the Internet
 		<div class="elements">
 			<img src="/images/mark-eris.png" />
 			<p>This is my space. A spot on the internet to express my thoughts and share what I know with the world. My goal for this site is simple: Teach the world what I know.</p>
-		</div>	
+		</div>
+		<div class="bottom"><a href="about.html">See more about Mark</a></div>
 	</div>
 	<div class="one_third black">
 		<div class="title"><h2>From the blog</h2></div>
 		<div class="elements">
-			<div class="post">
-				<h3><a href="blog_comments.html">Thanks Ed</a></h3><time datetime="2010-04-17">01 Apr 2010</time>
-				<p>Ed jump-started the industry that changed the world and I can’t imagine what we would have today if Ed didn’t do what he did.</p>
-			</div>
-			<div class="post">
-				<h3><a href="blog_comments.html">Rails 3.0 Setup using rvm &amp; Ruby 1.9.2</a></h3><time datetime="2010-04-17">24 Feb 2010</time>
-				<p>Some people want to start doing some Rails 3.0 Beta work on Ruby 1.9.2 on their development machines. I’m tossing this up here to have something to point people to when they have questions.</p>
-			</div>
-			<div class="post last">
-				<h3><a href="blog_comments.html">Fix Rails 3.0 `gem_original_require': no such file to load -- set (LoadError)</a></h3><time datetime="2010-04-17">23 Feb 2010</time>
-				<p>I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app.</p>
-			</div>
-		</div>	
+			{% for post in site.posts %}
+			  {% if forloop.index <= page.from_the_blog %}
+			  <div class='post'>
+					<h3><a href="{{post.url}}">{{post.title}}</a></h3><time datetime="{{post.date}}">{{post.date | date_to_string}}</time>
+					<p>{{post.content | strip_html | truncate: 100}}</p>
+					<a href='{{post.url}}#disqus_thread'>View Comments</a>
+			  </div>
+			  {% endif %}
+			{% endfor %}
+		</div>
 		<div class="bottom"><a href="blog.html">See all posts</a></div>
 	</div>
 	<div class="one_third black">

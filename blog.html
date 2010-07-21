@@ -3,27 +3,77 @@ layout: master
 title: Blog
 full_posts: 10
 ---
+<section id="header">
+	<h1>Blog</h1>
+	<p>Ramblings of a 20-something computer geek</p>
+</section>
 
-<a href='http://feeds2.feedburner.com/amerine' class='float-right'><img src='/images/subscribe.png' alt='Subscribe to XML Feed'/></a>
+  <section class="blog">
+	<div id="posts">
+		{% for post in site.posts %}
+		  {% if forloop.index < page.full_posts %}
+			<article>
+				<div class="title">
+					<h1><a href="{{post.url}}">{{post.title}}</a></h1>
+					<time datetime="{{post.date}}">{{post.date | date: "%d"}}<br/><span>{{post.date | date: "%b"}}</span></time>
+					<div class="clear"></div>
+				</div>
+				<div class="elements">
+					{{post.content}}
+					<footer>
+						<div class="coms"><a href="{{post.url}}#disqus_thread">Comments</a></div>
+					</footer>
+				</div>
+			</article>
+		  {% endif %}
+		{% endfor %}
+		<div class="clear"></div>
+		<div class="prevnext">
+			<div class="prev"><a href="#" class="prev">Prev Posts</a></div>
+			<div class="next"><a href="#" class="next">Next Posts</a></div>
+		</div>
+	</div><!-- posts -->
+	<aside>
+		<div class="rss block">
+			<a href="#">RSS Feed</a>
+		</div>
+		<div class="tweet block">
+			<h2><div>Latest tweet</div></h2>	
+		</div>
+		<div class="popular block">
+			<div class="minimenu"><a href="#" class="active">Popular</a><a href="#">Recent</a></div>
+			<ul>
+				<li><a href="#">The most popular post.</a></li>
+				<li><a href="#">Working ion the field selling themes, you can bet yeah!</a></li>
+				<li><a href="#">A little remainder that.</a></li>
+				<li><a href="#">Fit this up.</a></li>
+			</ul>
+			
+		</div>
+		<div class="categories block">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Featured</a></li>
+				<li><a href="#">Design</a></li>
+				<li><a href="#">Internet</a></li>
+				<li><a href="#">Google</a></li>
+				<li><a href="#">Programming</a></li>
+				<li><a href="#">Flash</a></li>
+			</ul>
+			
+		</div>
+		<div class="archives block">
+			<h2>Archives</h2>
+			<ul>
+				<li><a href="#">November 2009</a></li>
+				<li><a href="#">December 2009</a></li>
+				<li><a href="#">January 2010</a></li>
+				<li><a href="#">February 2010</a></li>
+				<li><a href="#">March 2010</a></li>
+				<li><a href="#">April 2010</a></li>
+			</ul>
+		</div>
+	</aside>
+	<div class="clear"></div>
 
-{% for post in site.posts %}
-  {% if forloop.index < page.full_posts %}
-  <div class='post'>
-    <span class='date'>{{post.date | date_to_string}}</span>
-    <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
-    <div class='body'>{{post.content}}</div>
-		<a href='{{post.url}}#disqus_thread'>View Comments</a>
-  </div>
-  {% else %}
-    {% if forloop.index == page.full_posts %}
-    <h3>Older Posts</h3>
-    <table class='post-list'>
-    {% endif %}
-    <tr>
-      <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
-      <td>{{ post.date | date_to_string }}</td>
-			<td><a href='{{post.url}}#disqus_thread'>Comments</a></td>
-    </tr>
-  {% endif %}
-{% endfor %}
-</table>
+</section>
