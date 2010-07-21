@@ -220,6 +220,9 @@ blockquote {}
 		#content section.blog aside .tweet p{padding: 15px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; }
 		#content section.blog aside .tweet p a{color: #cbcbcb;}
 		#content section.blog aside .tweet p a:hover{color: #0065A7; text-decoration: none;}
+		#content section.blog aside div.tweet ul.tweet_list {color: #cbcbcb;font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
+		#content section.blog aside div.tweet ul.tweet_list a {background-image: none;}
+		#content section.blog aside div.tweet a.tweet_avatar {float: left; padding: 10px;}
 		
 		#content section.blog aside .rss{padding: 5px 0px 5px 31px;
 			background-image: url(/images/icon_rss.png);
@@ -243,7 +246,7 @@ blockquote {}
 		#content section.blog article img{border: 5px solid #efefef; margin: 5px;}
 		#content section.blog article img.left{float: left; margin: 0px 10px 5px 0px;}
 		#content section.blog article img.right{float: left;margin: 0px 0px 5px 10px;}
-		#content section.blog article h2{text-shadow: 1px 1px 1px #bbb;}
+		#content section.blog article h2{text-shadow: 1px 1px 1px #bbb; margin-top: 16px;}
 		#content section.blog article h3{text-shadow: 1px 1px 1px #eeeeee;}
 		
 		#content section.blog article footer{background: none; height: 14px; padding: 3px 0px;font-size: 10px; color: #333; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;}
@@ -259,6 +262,11 @@ blockquote {}
 			background-image: url(/images/arrow_li_black.png);
 			background-repeat: no-repeat;
 			background-position: 0px 4px;
+		}
+		#content section.blog article p code {
+			background: #f8f8f8;
+  			font-size: 14px;
+  			font-family: "Consolas","Courier New",Courier,monospace;
 		}
 		
 		#content section.blog .prevnext{padding: 5px 0px; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
@@ -472,15 +480,7 @@ footer {
 footer a {color: #0065A7;}
 footer div{width: 940px; margin: 0 auto;}
 footer p{float: left;}
-
-footer ul{ list-style: none;
-float: right;	
-}
+footer ul{ list-style: none;float: right;}
 footer ul li{float: left; padding-left: 15px;}
 footer ul li a{padding-right: 15px;}
 footer ul li a:hover{text-decoration: underline;}
-
-
-
-
-
