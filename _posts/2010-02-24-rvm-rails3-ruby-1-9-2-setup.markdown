@@ -2,23 +2,23 @@
 title: Rails 3.0 Setup using rvm & Ruby 1.9.2
 layout: post
 ---
-###Intro
+##Intro
 Some people want to start doing some Rails 3.0 Beta work on Ruby 1.9.2 on their development machines. I'm tossing this up here to have something to point people to when they have questions. 
+
 
 I'm making a few assumptions:  
 
 1. You're on OS X Snow Leopard (x86_64)
 2. You have macports install (or readline installed somewhere else on your box) 
 
-###Install Ruby Version Manager  
-
+##Install Ruby Version Manager
 {% highlight console %}
 $ sudo gem install rvm
 $ rvm-install
 {% endhighlight %}
 
-###Install Ruby 1.9.2 HEAD (i.e. latest development code)
-> Note: Your readline directory may be in a different spot.  
+##Install Ruby 1.9.2 HEAD (i.e. latest development code)
+> Note: Your readline directory may be in a different spot. 
 
 {% highlight console %}
 $ rvm install 1.9.2-head -C --enable-shared,--with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
@@ -43,18 +43,19 @@ Installing rake
 Installation of gems for ruby-1.9.2-head is complete.
 
 $ ruby -v
-ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
+ruby 1.9.2dev
 {% endhighlight %}
 
 
-###Create a Rails 3.0 Gem set and switch to it
+##Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
 {% highlight console %}
 $ rvm gemset create rails3beta
 $ rvm 1.9.2-head@rails3beta
 {% endhighlight %}
 
-###Install the Rails 3.0 Gems and dependencies 
+
+##Install the Rails 3.0 Gems and dependencies 
 {% highlight console %}
 $ gem install sqlite3-ruby
 $ env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
@@ -62,7 +63,8 @@ $ gem install tzinfo builder memcache-client rack rack-test rack-mount erubis ma
 $ gem install rails --pre
 {% endhighlight %}
 
-###Done
+
+##Done
 Hopefully everything worked:
 {% highlight console %}
 $ ruby -v
@@ -101,16 +103,16 @@ $ gem list
 	tzinfo (0.3.16)
 {% endhighlight %}
 
-###Switching back to your system Ruby
+##Switching back to your system Ruby
 `rvm system`
 
-###Back to your Rails3.0 environment
+##Back to your Rails3.0 environment
 `rvm 1.9.2-head@rails3beta`
 
-###Use your RVM environment as your Default 
+##Use your RVM environment as your Default 
 `rvm 1.9.2-head@rails3beta --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
 
-####Update 04/16/2010
+###Update 04/16/2010
 Updated to reflect the recent changes in RVM.

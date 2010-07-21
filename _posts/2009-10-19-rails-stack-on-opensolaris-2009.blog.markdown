@@ -4,8 +4,6 @@ title: Rails Stack on OpenSolaris 2009.06
 ---
 I enjoy using [OpenSolaris](http://opensolaris.org) when I can, and I've been using it for a couple small Ruby on Rails deployments. I've received a few questions recently about deploying Ruby on Rails app on [OpenSolaris](http://opensolaris.org), so to kill a few 'birds' with one stone. I'm throwing this post together so that I can just point them here and let them run with it. 
 
-{% include ad-block.markdown %}
-
 Sun has an easy to install meta-package called `amp` that includes Apache 2.2, Apache 2.2 DTrace probes, MySQL Server 5.1 & PHP. If you've never used Solaris/OpenSolaris before the `pfexec` command will seem foreign to you. Don't let it worry you its part of the Solaris RBAC (Role Based Access Control) by default the non-root user you created during the install has the `root` user role and can execute commands as root if you use `pfexec`.
 
 I'm assuming you're starting from scratch on an OpenSolaris 2009.06 server with nothing extra installed. I also assume you've had some experience with a Unix/Linux variant.
@@ -128,14 +126,14 @@ Here is the contents of my file:
 <VirtualHost *:80>
      ServerName test-site.com
      DocumentRoot /data/apps/test/public
-
+     
      <Directory /data/apps/test>
       Options +FollowSymLinks -SymLinksIfOwnerMatch +MultiViews -Indexes -ExecCGI
       AllowOverride ALL
       Order allow,deny
       Allow from all
      </Directory>
-
+     
 </VirtualHost>
 {% endhighlight %}
 Add the `127.0.0.1 test-site.com` to `/etc/hosts`

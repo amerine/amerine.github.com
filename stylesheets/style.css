@@ -119,6 +119,20 @@ blockquote {}
 	#menu ul li.last a{border-bottom: none;}
 	
 	
+	/***** CODE BLOCKS ******/
+	pre {
+	  background: #f8f8f8;
+	  border: 1px solid #E7E5DC;
+	  border-width: 4px 2px 4px 2px;
+	  padding: 7px;
+	  overflow: auto;
+	  color: black;
+	  line-height: 120%;
+	  font-family: "Consolas","Courier New",Courier,monospace;
+	  font-size: 12px;
+	  letter-spacing: 0;
+	}
+	
 /****** Content ******/
 #content { 	width: 970px; margin: 0 auto; border: 1px solid #E1E1E1;}
 #content section#header{border: 10px solid #ffffff; background: #0065A7; padding: 15px 20px 20px 20px; }
@@ -236,6 +250,7 @@ blockquote {}
 		#content section.blog article footer div{padding: 0px; margin: 0px;}
 		#content section.blog article footer .metas{float: left;  width: 550px; padding-left: 5px;}
 		#content section.blog article footer .coms{float: right; width: 100px; text-align: right; padding-right: 5px;}
+		#content section.blog article p {padding-bottom: 14px;}
 		#content section.blog article p.big{color: #333; font-size: 18px; text-shadow: 1px 1px 2px #bbb; font-family: Georgia, 'Times New Roman', Times, serif;}
 		#content section.blog article blockquote{background: #f0f2f4; padding: 15px; 
 											font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}

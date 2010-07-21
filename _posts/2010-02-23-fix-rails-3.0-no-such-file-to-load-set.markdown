@@ -44,4 +44,5 @@ aridlous dug around the bundler src after I helped him out and came back with th
 >interesting, but the bug seems to be possibly 2 things: empty GEM_HOME should not be used, and when the join occurs I think it is creating an invalid GEM_PATH=":/Users/User/.gem/ruby/1.8:/opt/local/lib/ruby/gems/1.8:" ... it should not have that leading ':'
 
 UPDATE: [Filed an issue in Bundlers issue tracker](http://github.com/carlhuda/bundler/issues/issue/133)
+
 UPDATE 2: [Fixed in 55509f](http://github.com/carlhuda/bundler/commit/55509f23693bb344696d1dfa7fa0f0eb2108adf6)
