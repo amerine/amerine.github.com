@@ -2,38 +2,51 @@
 layout: master
 title: Open-Source Projects
 ---
-
-<h2>Open-Source</h2>
-
-<p>I have a number of open-source projects hosted on <a href='http://github.com/amerine' rel='me' target='_blank'>GitHub</a>. The list below is dynamically populated from all of my projects with the most popular ones appearing first.</p>
-
-<div id='github-projects' class='big'>
-	<div class="repo">  
-		<h3><a href="http://github.com/amerine/btexty">btexty</a></h3>  
-		<span class="desc">API wrapper for the BTexty API</span>
-	</div>
-	<div class="repo">  
-		<h3><a href="http://github.com/amerine/nitfr">nitfr</a></h3>  
-		<span class="desc">Ruby NITF parser</span>
-	</div>
-	<div class="repo">  
-		<h3><a href="http://github.com/amerine/httparty">httparty</a></h3>  
-		<span class="desc">Makes http fun! Also, makes consuming restful web services dead easy.</span>
+<section class="pageboxy black">	
+	<div class="elements">
+		<h1>Open Source</h1>
+			<p class="big">I have a number of open-source projects or forks hosted on <a href='http://github.com/amerine' rel='me' target='_blank'>GitHub</a>. The list below is dynamically populated from all of my repositories with the most popular ones appearing first.</p>
 		</div>
-		<div class="repo">  
-			<h3><a href="http://github.com/amerine/rails">rails</a></h3>  
-			<span class="desc">Ruby on Rails</span>
-		</div>
-		<div class="repo">  
-			<h3><a href="http://github.com/amerine/whereisthefuckinglog">whereisthefuckinglog</a></h3>  
-			<span class="desc">Helping people find their logs since 2009</span>
-		</div>
-		<div class="repo">  
-			<h3><a href="http://github.com/amerine/toggl4r">toggl4r</a></h3>  
-			<span class="desc">API wrapper for the Toggl API</span>
+		<br/>
+		
+	<div id="github-projects">
+		<div class="box white one_quarter">
+			<div class="contents">
+				<div class="title"><h2>btexty</h2></div>
+				<p>API wrapper for the BTexty API</p>
+				<p><a href="http://github.com/amerine/btexty">view project</a></p>
 			</div>
 		</div>
-</div>
+		
+		<div class="box white one_quarter">
+			<div class="contents">
+				<div class="title"><h2>amerine.github.com</h2></div>
+				<p>Mark Turner Blog</p>
+				<p><a href="http://github.com/amerine/amerine.github.com">view project</a></p>
+			</div>
+		</div>
+		
+		<div class="box white one_quarter">
+			<div class="contents">
+				<div class="title"><h2>rack_clicky</h2></div>
+				<p>Rack Middleware to embed the Clicky (www.getclicky.com) tracking code.</p>
+				<p><a href="http://github.com/amerine/rack_clicky">view project</a></p>
+			</div>
+		</div>
+		
+		<div class="box white one_quarter">
+			<div class="contents">
+				<div class="title"><h2>niftr</h2></div>
+				<p>Ruby NITF parser</p>
+				<p><a href="http://github.com/amerine/niftr">view project</a></p>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+
+</section>
 
 <script type="text/javascript" charset="utf-8">
   $.githubUser('amerine', function(data) {
@@ -44,12 +57,21 @@ title: Open-Source Projects
       return b.watchers - a.watchers;
     });
     
+		var loop_count = 0;
     $(repos).each(function() {
+			if (loop_count == 4){
+				$('#github-projects').append('<div class="clear"></div>');
+				loop_count = 0;
+			}
       $('#github-projects').append("\
-<div class='repo'>\
-  <h3><a href='" + this.url + "'>" + this.name + "</a></h3>\
-  <span class='desc'>"+this.description+"</span>\
-</div>");
+			<div class='box white one_quarter'>\
+				<div class='contents'>\
+					<div class='title'><h2>"+this.name+"</h2></div>\
+					<p>"+ this.description +"</p>\
+					<p><a href='"+this.url+"'>view project</a></p>\
+				</div>\
+			</div>");
+			loop_count += 1;
     });
   });
 </script>

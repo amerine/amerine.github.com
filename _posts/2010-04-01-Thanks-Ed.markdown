@@ -2,7 +2,7 @@
 layout: post
 title: "Thanks Ed"
 ---
-![Ed Roberts](images/ed-roberts.jpg "Ed Roberts (1941 - 2010)")  
+![Ed Roberts](/images/ed-roberts.jpg "Ed Roberts (1941 - 2010)")  
 
   Ed Roberts (1941 - 2010)
 

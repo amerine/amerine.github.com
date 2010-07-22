@@ -238,8 +238,8 @@ blockquote {}
 		#content section.blog article .elements{padding: 20px;}
 		#content section.blog article .title{ border-bottom: 1px solid #e1e1e1; padding: 0px 0px 0px 0px; }
 		#content section.blog article h1, #content section.blog article h2, #content section.blog article h3{color: #323232;}
-		#content section.blog article .title h1 {margin: 0px; padding: 0px;  float: left;}
-		#content section.blog article .title time{background: #f0f0f0; line-height: 13px;color: #0065A7; margin-top: -4px; padding-top: 6px;text-align: center; width: 40px; height: 36px; display: block; float: left;
+		#content section.blog article .title h1 {margin: 0px; padding: 0px;  float: left; width: 670px;}
+		#content section.blog article .title time{background: #f0f0f0; line-height: 13px;color: #0065A7; margin-top: -4px; padding-top: 6px;text-align: center; width: 40px; height: 36px; display: block; float: right;
 		font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 16px;}
 		#content section.blog article .title time span{font-size: 11px; }
 		#content section.blog article .title h1 a{background: #0065A7; color: #fff; padding: 4px 10px 6px 20px;}
@@ -467,16 +467,10 @@ blockquote {}
 	#content section.footertop .black .elements time{font-size: 14px; color: #444444; padding-left: 5px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
 	#content section.footertop .black .bottom{border-top: 1px solid #1A1A1A; padding: 5px 10px; text-align: right;}
 	#content section.footertop .black .bottom a{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px;}
-	
-footer { 
-	background: #222222;
-	height: 25px;
-	padding-top: 15px;
-	margin-top: 20px;
-	font-size: 11px;
-	color: #cbcbcb;
-	border-top: 1px solid #E1E1E1;
-}
+
+
+/****** FOOTER ******/
+footer { background: #222222; height: 25px; padding-top: 15px; margin-top: 20px; font-size: 11px; color: #cbcbcb;	border-top: 1px solid #E1E1E1;}
 footer a {color: #0065A7;}
 footer div{width: 940px; margin: 0 auto;}
 footer p{float: left;}
@@ -484,3 +478,6 @@ footer ul{ list-style: none;float: right;}
 footer ul li{float: left; padding-left: 15px;}
 footer ul li a{padding-right: 15px;}
 footer ul li a:hover{text-decoration: underline;}
+
+/****** GITHUB REPOS ******/
+#github-projects div.box.white.one_quarter {margin-top: 15px;}
