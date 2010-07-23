@@ -377,13 +377,13 @@ blockquote {}
 		
 #content section.pages section .last{padding: 0px;}
 
-/****** Pages boxy ******/
-#content nav.menuboxy{   background: #f2f2f2; border-top: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1;}
-#content nav.menuboxy ul{height: 30px;}
-#content nav.menuboxy ul li{padding: 10px; padding-top: 7px; padding-bottom: 8px;border-right: 1px solid #E1E1E1;  float: left; color: #fff; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
-#content nav.menuboxy ul li a{color: #333333;}
-#content nav.menuboxy ul li a:hover{color: #0065A7; text-decoration: none;}
-#content nav.menuboxy ul li a.active{color: #0065A7;}
+/****** Pages amerine ******/
+#content nav.menuamerine{   background: #f2f2f2; border-top: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1;}
+#content nav.menuamerine ul{height: 30px;}
+#content nav.menuamerine ul li{padding: 10px; padding-top: 7px; padding-bottom: 8px;border-right: 1px solid #E1E1E1;  float: left; color: #fff; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
+#content nav.menuamerine ul li a{color: #333333;}
+#content nav.menuamerine ul li a:hover{color: #0065A7; text-decoration: none;}
+#content nav.menuamerine ul li a.active{color: #0065A7;}
 
 #content section.black{background: #0A0909; color: #cbcbcb;}
 #content section.black h1, #content section.black h2, #content section.black h3{color: #ffffff;}
@@ -409,41 +409,41 @@ blockquote {}
 			background-position: 0px 4px;
 			}
 		
-#content section.pageboxy{ padding: 10px 0px 10px 10px;  margin-top: 10px;}
+#content section.pageamerine{ padding: 10px 0px 10px 10px;  margin-top: 10px;}
  
-#content section.pageboxy h1{font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; padding-bottom: 5px;}
-#content section.pageboxy h2{padding-bottom: 5px; /*text-shadow: 1px 1px 1px #000000;*/}
-#content section.pageboxy hr{margin-right: 10px;}
-#content section.pageboxy blockquote{ padding: 15px; margin-right: 20px; margin-left: 10px;
+#content section.pageamerine h1{font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; padding-bottom: 5px;}
+#content section.pageamerine h2{padding-bottom: 5px; /*text-shadow: 1px 1px 1px #000000;*/}
+#content section.pageamerine hr{margin-right: 10px;}
+#content section.pageamerine blockquote{ padding: 15px; margin-right: 20px; margin-left: 10px;
 									font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
-#content section.pageboxy ul{padding-left: 20px;}
-#content section.pageboxy ul li{padding-left: 15px; padding-bottom: 5px;
+#content section.pageamerine ul{padding-left: 20px;}
+#content section.pageamerine ul li{padding-left: 15px; padding-bottom: 5px;
 			
 		}
-#content section.pageboxy p.big{ font-size: 18px;  font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; padding-bottom: 10px;}
-#content section.pageboxy div.elements{padding: 10px 20px 10px 10px;}
+#content section.pageamerine p.big{ font-size: 18px;  font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; padding-bottom: 10px;}
+#content section.pageamerine div.elements{padding: 10px 20px 10px 10px;}
 
-	#content section.pageboxy .white{background: #fff; color: #666;}
+	#content section.pageamerine .white{background: #fff; color: #666;}
 	#content section.white .white{background: #f2f2f2; color: #666;}
-	#content section.pageboxy .white h2{color: #ffffff;}
-	#content section.pageboxy .white h3{color: #323232;}
-	#content section.pageboxy .white strong{color:#323232;}
+	#content section.pageamerine .white h2{color: #ffffff;}
+	#content section.pageamerine .white h3{color: #323232;}
+	#content section.pageamerine .white strong{color:#323232;}
 
 	
-	#content section.pageboxy .black{background: #000; color: #cbcbcb;}
-	#content section.pageboxy .black h2{color: #ffffff;}
-	#content section.pageboxy .black h3{color: #fff;}
-	#content section.pageboxy .black strong{color:#fff;}
+	#content section.pageamerine .black{background: #000; color: #cbcbcb;}
+	#content section.pageamerine .black h2{color: #ffffff;}
+	#content section.pageamerine .black h3{color: #fff;}
+	#content section.pageamerine .black strong{color:#fff;}
 	
 
-	#content section.pageboxy .box{ font-size: 12px;}
-	#content section.pageboxy .box .contents{ padding: 15px;}
-	#content section.pageboxy .box img{margin-bottom: 10px;}
-	#content section.pageboxy .box a{color:#0065A7;}
-	#content section.pageboxy .box div.title{ min-width: 1px; background: #0065A7;margin-bottom: 10px; margin-right: 50px;padding: 0px; margin-left: -15px;}
-	#content section.pageboxy .box div.shorttitle{ margin-right: 100px;}
-	#content section.pageboxy .box div.title h2{ min-width: 1px; padding: 5px 10px 7px 15px;}
-	#content section.pageboxy .box h3{ font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;}
+	#content section.pageamerine .box{ font-size: 12px;}
+	#content section.pageamerine .box .contents{ padding: 15px;}
+	#content section.pageamerine .box img{margin-bottom: 10px;}
+	#content section.pageamerine .box a{color:#0065A7;}
+	#content section.pageamerine .box div.title{ min-width: 1px; background: #0065A7;margin-bottom: 10px; margin-right: 50px;padding: 0px; margin-left: -15px;}
+	#content section.pageamerine .box div.shorttitle{ margin-right: 100px;}
+	#content section.pageamerine .box div.title h2{ min-width: 1px; padding: 5px 10px 7px 15px;}
+	#content section.pageamerine .box h3{ font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;}
 	#github-projects div.box.white.one_quarter div.contents div.title {margin-right: 0px;}
 	
 
