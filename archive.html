@@ -1,0 +1,23 @@
+---
+title: Archive
+layout: master
+---
+
+
+<section id="header">
+<h1>Archive</h1>
+</section>
+
+<section class="pageamerine white">
+
+	<div class="elements">
+		{% for post in site.posts %}
+		<time datetime="{{post.date}}">{{post.date | date: "%d %b %Y"}}</time>
+		<h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+		<br />
+		{% endfor %}
+	</div>
+
+	<div class="clear"></div>
+
+</section>
