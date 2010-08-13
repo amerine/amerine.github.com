@@ -3,12 +3,12 @@ title: Rails 3.0 Setup using rvm & Ruby 1.9.2
 layout: post
 ---
 ##Intro
-Some people want to start doing some Rails 3.0 Beta work on Ruby 1.9.2 on their development machines. I'm tossing this up here to have something to point people to when they have questions. 
+People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2-head installed. I'm tossing this up here to have something to point people to when they have questions. 
 
 
 I'm making a few assumptions:  
 
-1. You're on OS X Snow Leopard (x86_64)
+1. You're on OS X Snow Leopard (x86_64) (Most of these instructions will work on any *nix box. Leave a comment if you have trouble.)
 2. You have macports install (or readline installed somewhere else on your box) 
 
 ##Install Ruby Version Manager
