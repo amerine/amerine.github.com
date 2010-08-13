@@ -12,16 +12,17 @@ I'm making a few assumptions:
 2. You have macports install (or readline installed somewhere else on your box) 
 
 ##Install Ruby Version Manager
+> Note: Just run this command and follow the instructions. 
+
 {% highlight console %}
-$ sudo gem install rvm
-$ rvm-install
+$ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 {% endhighlight %}
 
 ##Install Ruby 1.9.2 HEAD (i.e. latest development code)
 > Note: Your readline directory may be in a different spot. 
 
 {% highlight console %}
-$ rvm install 1.9.2-head -C --enable-shared,--with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
+$ rvm install 1.9.2-head -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
 Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-head
 
 Running autoconf
@@ -42,6 +43,8 @@ Installing rake
 
 Installation of gems for ruby-1.9.2-head is complete.
 
+$ rvm 1.9.2-head
+
 $ ruby -v
 ruby 1.9.2dev
 {% endhighlight %}
@@ -50,8 +53,7 @@ ruby 1.9.2dev
 ##Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
 {% highlight console %}
-$ rvm gemset create rails3beta
-$ rvm 1.9.2-head@rails3beta
+$ rvm rvm use --create 1.9.2-head@rails3
 {% endhighlight %}
 
 
@@ -59,7 +61,6 @@ $ rvm 1.9.2-head@rails3beta
 {% highlight console %}
 $ gem install sqlite3-ruby
 $ env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
-$ gem install tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler i18n
 $ gem install rails --pre
 {% endhighlight %}
 
@@ -70,47 +71,47 @@ Hopefully everything worked:
 $ ruby -v
   ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
 $ rails --version
-  Rails 3.0.0.beta
+  Rails 3.0.0.rc
 $ gem list
   *** LOCAL GEMS ***
 
   abstract (1.0.0)
-  actionmailer (3.0.0.beta)
-  actionpack (3.0.0.beta)
-  activemodel (3.0.0.beta)
-  activerecord (3.0.0.beta)
-  activeresource (3.0.0.beta)
-  activesupport (3.0.0.beta, 2.3.5)
-  arel (0.2.1)
+  actionmailer (3.0.0.rc)
+  actionpack (3.0.0.rc)
+  activemodel (3.0.0.rc)
+  activerecord (3.0.0.rc)
+  activeresource (3.0.0.rc)
+  activesupport (3.0.0.rc)
+  arel (0.4.0)
   builder (2.1.2)
-  bundler (0.9.7)
-  erubis (2.6.5)
-  i18n (0.3.3)
-  mail (2.1.3)
-  memcache-client (1.7.8)
+  bundler (1.0.0.rc.5)
+  erubis (2.6.6)
+  i18n (0.4.1)
+  mail (2.2.5)
+  memcache-client (1.8.5)
   mime-types (1.16)
   mysql (2.8.1)
-  rack (1.1.0)
-  rack-mount (0.6.0, 0.4.7)
-  rack-test (0.5.3)
-  rails (3.0.0.beta)
-  railties (3.0.0.beta)
+  rack (1.2.1)
+  rack-mount (0.6.9)
+  rack-test (0.5.4)
+  rails (3.0.0.rc)
+  railties (3.0.0.rc)
   rake (0.8.7)
-  sqlite3-ruby (1.2.5)
+  sqlite3-ruby (1.3.1)
   text-format (1.0.0)
   text-hyphen (1.0.0)
-  thor (0.13.3)
-  tzinfo (0.3.16)
+  thor (0.14.0)
+  tzinfo (0.3.22)
 {% endhighlight %}
 
 ##Switching back to your system Ruby
 `rvm system`
 
 ##Back to your Rails3.0 environment
-`rvm 1.9.2-head@rails3beta`
+`rvm 1.9.2-head@rails3`
 
 ##Use your RVM environment as your Default 
-`rvm 1.9.2-head@rails3beta --default`
+`rvm 1.9.2-head@rails3 --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
 
