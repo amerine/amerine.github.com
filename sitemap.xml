@@ -7,27 +7,32 @@ layout: nil
 		<loc>http://amerine.net</loc>
 		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+	  <loc>http://amerine.net/about.html</loc>
+	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	  <changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 	  <loc>http://amerine.net/blog.html</loc>
 	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 	  <changefreq>daily</changefreq>
-	</url>
-	<url>
-	  <loc>http://amerine.net/about.html</loc>
-	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-	  <changefreq>weekly</changefreq>
+		<priority>0.7</priority>
 	</url>
 	<url>
 	  <loc>http://amerine.net/open-source.html</loc>
 	  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-	  <changefreq>daily</changefreq>
+	  <changefreq>monthly</changefreq>
+		<priority>0.6</priority>
 	</url>
 	{% for post in site.posts %}
 	<url>
 	  <loc>http://amerine.net{{post.url}}</loc>
 	  <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 	  <changefreq>weekly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	{% endfor %}
 </urlset>
