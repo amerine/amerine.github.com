@@ -22,7 +22,7 @@ $ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 > Note: Your readline directory may be in a different spot. 
 
 {% highlight console %}
-$ rvm install 1.9.2-p0 -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
+$ rvm install 1.9.2 -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
 Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-p0
 
 Running autoconf
