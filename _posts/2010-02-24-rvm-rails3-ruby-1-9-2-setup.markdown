@@ -3,7 +3,7 @@ title: Rails 3.0 Setup using rvm & Ruby 1.9.2
 layout: post
 ---
 ##Intro
-People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2-head installed. I'm tossing this up here to have something to point people to when they have questions. 
+People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2 installed. I'm tossing this up here to have something to point people to when they have questions. 
 
 
 I'm making a few assumptions:  
@@ -18,42 +18,42 @@ I'm making a few assumptions:
 $ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 {% endhighlight %}
 
-##Install Ruby 1.9.2 HEAD (i.e. latest development code)
+##Install Ruby 1.9.2
 > Note: Your readline directory may be in a different spot. 
 
 {% highlight console %}
-$ rvm install 1.9.2-head -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
-Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-head
+$ rvm install 1.9.2-p0 -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
+Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-p0
 
 Running autoconf
 
-Configuring ruby-1.9.2-head, this may take a while depending on your cpu(s)...
+Configuring ruby-1.9.2-p0, this may take a while depending on your cpu(s)...
 
-Compiling ruby-1.9.2-head, this may take a while, depending on your cpu(s)...
+Compiling ruby-1.9.2-p0, this may take a while, depending on your cpu(s)...
 
-Installing ruby-1.9.2-head
+Installing ruby-1.9.2-p0
 
-Installation of ruby-1.9.2-head is complete.
+Installation of ruby-1.9.2-p0 is complete.
 
-Updating rubygems for ruby-1.9.2-head
+Updating rubygems for ruby-1.9.2-p0
 
-Installing gems for ruby-1.9.2-head.
+Installing gems for ruby-1.9.2-p0.
 
 Installing rake
 
-Installation of gems for ruby-1.9.2-head is complete.
+Installation of gems for ruby-1.9.2-p0 is complete.
 
-$ rvm 1.9.2-head
+$ rvm 1.9.2
 
 $ ruby -v
-ruby 1.9.2dev
+ruby 1.9.2p0
 {% endhighlight %}
 
 
 ##Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
 {% highlight console %}
-$ rvm rvm use --create 1.9.2-head@rails3
+$ rvm rvm use --create 1.9.2@rails3
 {% endhighlight %}
 
 
@@ -69,7 +69,7 @@ $ gem install rails --pre
 Hopefully everything worked:
 {% highlight console %}
 $ ruby -v
-  ruby 1.9.2dev (2010-02-25 trunk 26759) [x86_64-darwin10.2.0]
+  ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
 $ rails --version
   Rails 3.0.0.rc
 $ gem list
@@ -108,12 +108,15 @@ $ gem list
 `rvm system`
 
 ##Back to your Rails3.0 environment
-`rvm 1.9.2-head@rails3`
+`rvm 1.9.2@rails3`
 
 ##Use your RVM environment as your Default 
-`rvm 1.9.2-head@rails3 --default`
+`rvm 1.9.2@rails3 --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
 
 ###Update 04/16/2010
 Updated to reflect the recent changes in RVM.
+
+###Update 08/18/2010 
+Updated to use the production release of 1.9.2
