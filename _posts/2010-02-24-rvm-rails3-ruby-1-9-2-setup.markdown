@@ -53,7 +53,7 @@ ruby 1.9.2p0
 ##Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems. 
 {% highlight console %}
-$ rvm rvm use --create 1.9.2@rails3
+$ rvm use --create 1.9.2@rails3
 {% endhighlight %}
 
 
