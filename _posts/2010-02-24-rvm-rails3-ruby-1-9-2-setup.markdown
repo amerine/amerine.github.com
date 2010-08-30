@@ -61,7 +61,7 @@ $ rvm use --create 1.9.2@rails3
 {% highlight console %}
 $ gem install sqlite3-ruby
 $ env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
-$ gem install rails --pre
+$ gem install rails
 {% endhighlight %}
 
 
@@ -71,18 +71,18 @@ Hopefully everything worked:
 $ ruby -v
   ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
 $ rails --version
-  Rails 3.0.0.rc
+  Rails 3.0.0
 $ gem list
   *** LOCAL GEMS ***
 
   abstract (1.0.0)
-  actionmailer (3.0.0.rc)
-  actionpack (3.0.0.rc)
-  activemodel (3.0.0.rc)
-  activerecord (3.0.0.rc)
-  activeresource (3.0.0.rc)
-  activesupport (3.0.0.rc)
-  arel (0.4.0)
+  actionmailer (3.0.0)
+  actionpack (3.0.0)
+  activemodel (3.0.0)
+  activerecord (3.0.0)
+  activeresource (3.0.0)
+  activesupport (3.0.0)
+  arel (1.0.1)
   builder (2.1.2)
   bundler (1.0.0.rc.5)
   erubis (2.6.6)
@@ -92,10 +92,10 @@ $ gem list
   mime-types (1.16)
   mysql (2.8.1)
   rack (1.2.1)
-  rack-mount (0.6.9)
+  rack-mount (0.6.12)
   rack-test (0.5.4)
-  rails (3.0.0.rc)
-  railties (3.0.0.rc)
+  rails (3.0.0)
+  railties (3.0.0)
   rake (0.8.7)
   sqlite3-ruby (1.3.1)
   text-format (1.0.0)
@@ -120,3 +120,6 @@ Updated to reflect the recent changes in RVM.
 
 ###Update 08/18/2010 
 Updated to use the production release of 1.9.2
+
+###Update 08/30/2010 
+Updated to reflect the Rails 3.0 release. 
