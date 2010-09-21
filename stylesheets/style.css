@@ -234,7 +234,7 @@ blockquote {}
 		#content section.blog aside .rss a:hover{color: #0065A7; text-decoration: none;}
 
 	#content section.blog #posts{float: left; width: 710px; margin-right: 10px;}
-	#content section.blog article{background: #f2f2f2;  width: 710px; margin-bottom: 10px; padding-top: 25px;}
+	#content section.blog article{width: 710px; margin-bottom: 10px; padding-top: 25px;}
 		#content section.blog article .elements{padding: 20px;}
 		#content section.blog article .title{ border-bottom: 1px solid #e1e1e1; padding: 0px 0px 0px 0px; }
 		#content section.blog article h1, #content section.blog article h2, #content section.blog article h3{color: #323232;}
