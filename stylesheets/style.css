@@ -1,5 +1,4 @@
-@import "/stylesheets/reset.css"; /* Imports the reset.css */
-
+@import "/stylesheets/reset.css";
 body { 
 	background: #EFEFEF;
 	color: #666666;
@@ -7,13 +6,9 @@ body {
 	font-family: Arial,Helvetica,sans-serif;
 }
 
-
-/* HTML5 */
-
 article, aside, dialog, figure, footer, header, hgroup, nav, section { display:block; }
 time { display: inline; }
 
-/* Typography and default stuff */
 @font-face {
 	font-family: 'BebasRegular';
 	src: url('/fonts/BEBAS___-webfont.eot');
@@ -40,7 +35,7 @@ hr { border: 0 solid #e1e1e1; border-top-width: 1px; clear: both; height: 0; mar
 ol { list-style: decimal; }
 ul { list-style: none; }
 li {}
-p{}
+p{font: normal 15px/20px Palatino, "Palatino Linotype", serif; text-rendering: optimizeLegibility;}
 pre {}
 code {}
 blockquote {}
@@ -59,9 +54,6 @@ blockquote {}
 .one_third{float: left; width: 310px; margin-right: 10px;  }
 .two_third{float: left; width: 630px; margin-right: 10px;  }
 
-
-
-/****** Nav ******/
 #top{height: 60px; background: #222; margin-bottom: 20px; border-bottom: 1px solid #E1E1E1;}
 #top #logo{position: absolute; width: 50%;}
 #top #logo img{float: left;}
@@ -95,7 +87,6 @@ blockquote {}
 	text-decoration: none;
 }
 #menu li.current a {}
-	/* Level 2 */
 	
 	#menu ul {
 		background: #222; border: 1px solid #1b1b1a;	display: none;	padding: 5px;
@@ -118,8 +109,6 @@ blockquote {}
 	#menu ul li  a{padding: 2px 0px;}
 	#menu ul li.last a{border-bottom: none;}
 	
-	
-	/***** CODE BLOCKS ******/
 	pre {
 	  background: #f8f8f8;
 	  border: 1px solid #E7E5DC;
@@ -133,7 +122,6 @@ blockquote {}
 	  letter-spacing: 0;
 	}
 	
-/****** Content ******/
 #content { 	width: 970px; margin: 0 auto; border: 1px solid #E1E1E1;}
 #content section#header{border: 10px solid #ffffff; background: #0065A7; padding: 15px 20px 20px 20px; }
 #content section#header h1{font-size: 24px; padding-bottom: 0px; color: #ffffff; /*text-shadow: 1px 1px 2px #444;*/}
@@ -154,7 +142,7 @@ blockquote {}
 #content section#intro a{display: block; width: 100%; text-align: right; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
 
 #content section.main{background: #ffffff; padding: 10px 0px 10px 10px; }
-	#content section.main .white{font-size: 12px;color: #666666; }
+	#content section.main .white{font: normal 18px/25px Palatino, "Palatino Linotype", serif; text-rendering: optimizeLegibility; color: #666666; }
 	#content section.main .white img{display: block;margin-bottom: 5px;}
 	#content section.main .white h2{ height: 36px;  color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
 	#content section.main .white .elements{padding: 15px;}
@@ -175,7 +163,6 @@ blockquote {}
 	#content section.main .black .rss a{ color: #cbcbcb; padding-left: 5px;}
 	#content section.main .black .rss a:hover{ color: #0065A7;}
 
-/****** Portfolio ******/
 #content section.portfolio{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
 	#content section.portfolio aside{background: #000000;}
 	#content section.portfolio aside .elements{padding: 15px;}
@@ -190,11 +177,9 @@ blockquote {}
 		background-position: 15px 9px;
 	}
 		
-	/* 0065A7 */
 	#content section.portfolio section{background: #f2f2f2; padding: 10px; width: 610px;}
 	#content section.portfolio section .images{background: #eee;}
 
-/****** Blog *****/
 
 #content section.blog{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
 	#content section.blog aside{ float: left; width: 230px; margin-right: 10px; }
@@ -286,7 +271,6 @@ blockquote {}
 		}
 		#content section.blog .prevnext .next a:hover{	background-color: #0065A7; color: #fff; text-decoration: none;}
 		
-		/* comments */
 		#content section.blog article #comments{padding: 20px; }
 		#content section.blog article #comments .comment{margin-bottom: 20px;background: #f7f7f7; border-bottom: 1px solid #efefef;}
 		#content section.blog article #comments .comment .top{background: #efefef; padding: 5px 10px;}
@@ -335,7 +319,6 @@ blockquote {}
 			background-position: 0px 4px;
 		}
 		
-/****** Pages *****/
 
 #content section.pages{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
 	#content section.pages aside{background: #000000;}
@@ -377,7 +360,7 @@ blockquote {}
 		
 #content section.pages section .last{padding: 0px;}
 
-/****** Pages amerine ******/
+
 #content nav.menuamerine{   background: #f2f2f2; border-top: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1;}
 #content nav.menuamerine ul{height: 30px;}
 #content nav.menuamerine ul li{padding: 10px; padding-top: 7px; padding-bottom: 8px;border-right: 1px solid #E1E1E1;  float: left; color: #fff; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
@@ -446,10 +429,6 @@ blockquote {}
 	#content section.pageamerine .box h3{ font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;}
 	#github-projects div.box.white.one_quarter div.contents div.title {margin-right: 0px;}
 	
-
-
-
-/****** Footer ******/
 #content section.footertop{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
 	
 	#content section.footertop .black{background: #000000; padding-top: 5px;color: #cbcbcb; font-size: 12px;}
@@ -471,7 +450,6 @@ blockquote {}
 	#content section.footertop .black .bottom a{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px;}
 
 
-/****** FOOTER ******/
 footer { background: #222222; height: 25px; padding-top: 15px; margin-top: 20px; font-size: 11px; color: #cbcbcb;	border-top: 1px solid #E1E1E1;}
 footer a {color: #0065A7;}
 footer div{width: 940px; margin: 0 auto;}
@@ -481,5 +459,4 @@ footer ul li{float: left; padding-left: 15px;}
 footer ul li a{padding-right: 15px;}
 footer ul li a:hover{text-decoration: underline;}
 
-/****** GITHUB REPOS ******/
 #github-projects div.box.white.one_quarter {margin-top: 15px;}
