@@ -154,7 +154,7 @@ blockquote {}
 #content section#intro a{display: block; width: 100%; text-align: right; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
 
 #content section.main{background: #ffffff; padding: 10px 0px 10px 10px; }
-	#content section.main .white{background: #F2F2F2; font-size: 12px;color: #666666; }
+	#content section.main .white{font-size: 12px;color: #666666; }
 	#content section.main .white img{display: block;margin-bottom: 5px;}
 	#content section.main .white h2{ height: 36px;  color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
 	#content section.main .white .elements{padding: 15px;}
