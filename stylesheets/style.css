@@ -142,10 +142,10 @@ blockquote {}
 #content section#intro a{display: block; width: 100%; text-align: right; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
 
 #content section.main{background: #ffffff; padding: 10px 0px 10px 10px; }
-	#content section.main .white{font: normal 18px/25px Palatino, "Palatino Linotype", serif; text-rendering: optimizeLegibility; color: #666666; }
+	#content section.main .white{text-rendering: optimizeLegibility; color: black; }
 	#content section.main .white img{display: block;margin-bottom: 5px;}
 	#content section.main .white h2{ height: 36px;  color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
-	#content section.main .white .elements{padding: 15px;}
+	#content section.main .white .elements{background-color: #f6f6f6 ;padding: 15px;}
 	#content section.main .white .elements h3{ color: #323232; padding-bottom: 5px; }
 	#content section.main .white .elements p{  padding-bottom: 10px; }
 	#content section.main .white .elements a{text-align: right; display: block; padding-top: 5px; border-top: 1px solid #e1e1e1; 
