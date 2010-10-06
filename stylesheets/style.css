@@ -35,7 +35,7 @@ hr { border: 0 solid #e1e1e1; border-top-width: 1px; clear: both; height: 0; mar
 ol { list-style: decimal; }
 ul { list-style: none; }
 li {}
-p{font: normal 15px/20px Palatino, "Palatino Linotype", serif; text-rendering: optimizeLegibility;}
+p{}
 pre {}
 code {}
 blockquote {}
@@ -142,7 +142,7 @@ blockquote {}
 #content section#intro a{display: block; width: 100%; text-align: right; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
 
 #content section.main{background: #ffffff; padding: 10px 0px 10px 10px; }
-	#content section.main .white{text-rendering: optimizeLegibility; color: black; }
+	#content section.main .white{text-rendering: optimizeLegibility;}
 	#content section.main .white img{display: block;margin-bottom: 5px;}
 	#content section.main .white h2{ height: 36px;  color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
 	#content section.main .white .elements{background-color: #f6f6f6 ;padding: 15px;}
@@ -220,7 +220,7 @@ blockquote {}
 
 	#content section.blog #posts{float: left; width: 710px; margin-right: 10px;}
 	#content section.blog article{width: 710px; margin-bottom: 10px; padding-top: 25px;}
-		#content section.blog article .elements{padding: 20px;}
+		#content section.blog article .elements{text-rendering: optimizeLegibility; padding: 20px;}
 		#content section.blog article .title{ border-bottom: 1px solid #e1e1e1; padding: 0px 0px 0px 0px; }
 		#content section.blog article h1, #content section.blog article h2, #content section.blog article h3{color: #323232;}
 		#content section.blog article .title h1 {margin: 0px; padding: 0px;  float: left; width: 670px;}
