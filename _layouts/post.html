@@ -7,51 +7,49 @@ layout: master
 
 <section class="blog">
 <div id="posts">
-    <article>
+  <article>
     <div class="title">
-        <h1><a href="{{page.url}}">{{page.title}}</a></h1>
-        <time datetime="{{post.date}}">{{page.date | date: "%d"}}<br/><span>{{page.date | date: "%b"}}</span></time>
-        <div class="clear"></div>
+      <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+      <time datetime="{{post.date}}">{{page.date | date: "%d"}}<br/><span>{{page.date | date: "%b"}}</span></time>
+      <div class="clear"></div>
     </div>
     <div class="elements">
-        {{content}}
+      {{content}}
     </div>
     <hr/>
     <script type="text/javascript" charset="utf-8">
-        var disqus_url = "http://amerine.net{{page.url}}";
-        </script>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript" src="http://disqus.com/forums/amerine/embed.js"></script>
-        <noscript><a href="http://amerine.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-        </article>
-
-        <div class="clear"></div>
-    </div><!-- posts -->
-    <aside>
-    <div class="rss block">
-        <a href="#">RSS Feed</a>
-    </div>
-    <div class="tweet block">
-        <h2><div>Latest tweet</div></h2>
-    </div>
-    {% include popular-posts.html %}
-    <div class="archives block">
-        <h2>Archives</h2>
-        <ul>
-            <li><a href="/archive.html">View Archive</a></li>
-        </ul>
-    </div>
-    <div class="ad">
-      <script type="text/javascript">
-        var pintmeUser = 'amerine';
-      </script>
-      <script type="text/javascript" src="http://pint.me/javascripts/widget.js"></script>
-    </div>
-    <div class="ad">
-        {% include ad-block.markdown %}
-    </div>
-    </aside>
-    <div class="clear"></div>
-
-    </section>
+      var disqus_url = "http://amerine.net{{page.url}}";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" src="http://disqus.com/forums/amerine/embed.js"></script>
+    <noscript><a href="http://amerine.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+  <div class="clear"></div>
+</div>
+<aside>
+  <div class="rss block">
+    <a href="#">RSS Feed</a>
+  </div>
+  <div class="tweet block">
+    <h2><div>Latest tweet</div></h2>
+  </div>
+  {% include popular-posts.html %}
+  <div class="archives block">
+    <h2>Archives</h2>
+    <ul>
+      <li><a href="/archive.html">View Archive</a></li>
+    </ul>
+  </div>
+  <div class="ad">
+    <script type="text/javascript">
+      var pintmeUser = 'amerine';
+    </script>
+    <script type="text/javascript" src="http://pint.me/javascripts/widget.js"></script>
+  </div>
+  <div class="ad">
+    {% include ad-block.markdown %}
+  </div>
+</aside>
+<div class="clear"></div>
+</section>
