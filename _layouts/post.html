@@ -1,16 +1,12 @@
 ---
 layout: master
 ---
-<section id="header">
-<h1>Marks Blog</h1>
-</section>
-
-<section class="blog">
+<section class="blog grid_12">
 <div id="posts">
   <article>
     <div class="title">
       <h1><a href="{{page.url}}">{{page.title}}</a></h1>
-      <time datetime="{{post.date}}">{{page.date | date: "%d"}}<br/><span>{{page.date | date: "%b"}}</span></time>
+      <time datetime="{{post.date}}">{{page.date | date: "%d"}} {{page.date | date: "%b"}}</time>
       <div class="clear"></div>
     </div>
     <div class="elements">
@@ -27,29 +23,5 @@ layout: master
   </article>
   <div class="clear"></div>
 </div>
-<aside>
-  <div class="rss block">
-    <a href="#">RSS Feed</a>
-  </div>
-  <div class="tweet block">
-    <h2><div>Latest tweet</div></h2>
-  </div>
-  {% include popular-posts.html %}
-  <div class="archives block">
-    <h2>Archives</h2>
-    <ul>
-      <li><a href="/archive.html">View Archive</a></li>
-    </ul>
-  </div>
-  <!-- <div class="ad"> -->
-    <!-- <script type="text/javascript"> -->
-      <!-- var pintmeUser = 'amerine'; -->
-    <!-- </script> -->
-    <!-- <script type="text/javascript" src="http://pint.me/javascripts/widget.js"></script> -->
-  <!-- </div> -->
-  <div class="ad">
-    {% include ad-block.markdown %}
-  </div>
-</aside>
 <div class="clear"></div>
 </section>

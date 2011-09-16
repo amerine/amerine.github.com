@@ -3,58 +3,35 @@ layout: master
 title: Blog
 full_posts: 10
 ---
-<section id="header">
-<h1>Mark's Blog</h1>
+<section id="header" class="grid_12 alpha omega">
+  <h1>Blog</h1>
 </section>
 
-<section class="blog">
-<div id="posts">
+<section class="blog grid_12 alpha omega">
+  <div id="posts">
+
+
     {% for post in site.posts %}
     {% if forloop.index < page.full_posts %}
-    <article>
-    <div class="title">
+    <article class="grid_12">
+      <div class="title">
         <h1><a href="{{post.url}}">{{post.title}}</a></h1>
-        <time datetime="{{post.date}}">{{post.date | date: "%d"}}<br/><span>{{post.date | date: "%b"}}</span></time>
+        <time datetime="{{post.date}}">{{post.date | date: "%B %d, %Y"}}</time>
         <div class="clear"></div>
-    </div>
-    <div class="elements">
+      </div>
+      <div class="elements">
         {{post.content}}
-        <footer>
-        <div class="coms"><a href="{{post.url}}#disqus_thread">Comments</a></div>
-        </footer>
-    </div>
+      </div>
     </article>
+    <div class="clear"></div>
     {% endif %}
     {% endfor %}
     <div class="clear"></div>
     <div class="prevnext">
         <div class="prev"><a href="/archive.html" class="prev">View Archive</a></div>
     </div>
-</div><!-- posts -->
-<aside>
-<div class="rss block">
-    <a href="http://feeds2.feedburner.com/amerine">RSS Feed</a>
-</div>
-<div class="tweet block">
-    <h2><div>Latest tweet</div></h2>	
-</div>
-{% include popular-posts.html %}
-<div class="archives block">
-    <h2>Archives</h2>
-    <ul>
-        <li><a href="/archive.html">View Archive</a></li>
-    </ul>
-</div>
-<div class="ad">
-    {% include ad-block.markdown %}
-</div>
-<div class="ad">
-  <script type="text/javascript">
-    var pintmeUser = 'amerine';
-  </script>
-  <script type="text/javascript" src="http://pint.me/javascripts/widget.js"></script>
-</div>
-</aside>
-<div class="clear"></div>
+  </div>
 
+
+  <div class="clear"></div>
 </section>

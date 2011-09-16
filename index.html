@@ -3,57 +3,32 @@ layout: master
 title: Amerine on the Internet
 from_the_blog: 3
 ---
-
-<section class="footertop">
-<div class="one_third black">
-    <div class="title"><h2 class="boxed">About this site</h2></div>
-    <div class="elements">
-        <img src="/images/mark-eris.png" />
-        <p>This is my space. Another geeks spot on the internet.</p>
+<section>
+  <div class="grid_5">
+    <div class="title"><h2>Hello</h2></div>
+    <div>
+      <p>My name is Mark Turner. I go by "Amerine" on the internet. I'm an American living in Bend, Oregon.</p>
+      <p>I work for <a href="http://www.g5search.com">G5</a> as a senior software engineer (read ruby hacker). We're working hard to make the internet a better place for local businesses.</p>
+      <p style="text-align:center;"><a href="http://www.g5platform.com"><img src="/images/g5-logo.png"/></a></p>
+      <p>I'm also an organizer of the annual <a href="http://ruby.onales.com">Ruby On Ales</a> conference. The first regional Ruby conference in Cascadia.</p>
+      <p style="text-align:center;"><a href="http://ruby.onales.com"><img src="/images/ruby_on_als_logo.png"/></a></p>
     </div>
-    <div class="bottom"><a href="about.html">More about me</a></div>
-</div>
-<div class="one_third black">
-    <div class="title"><h2>From the blog</h2></div>
-    <div class="elements">
-        {% for post in site.posts %}
-        {% if forloop.index <= page.from_the_blog %}
-        <div class='post'>
-            <h3><a href="{{post.url}}">{{post.title}}</a></h3><time datetime="{{post.date}}">{{post.date | date_to_string}}</time>
-            <p>{{post.content | strip_html | truncate: 100}}</p>
-            <a href='{{post.url}}#disqus_thread'>View Comments</a>
-        </div>
-        {% endif %}
-        {% endfor %}
+    <div class="bottom"><h4><a href="about.html">More about me</a></h4></div>
+  </div>
+
+  <div class="grid_7 omega">
+    <div class="title"><h2>Recent blog posts</h2></div>
+    <div>
+      {% for post in site.posts %}
+      {% if forloop.index <= page.from_the_blog %}
+      <div class='post'>
+        <h3><a href="{{post.url}}">{{post.title}}</a></h3><time datetime="{{post.date}}">{{post.date | date_to_string}}</time>
+        <p>{{post.content | strip_html | truncate: 100}}</p>
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
     <div class="bottom"><a href="blog.html">See all posts</a></div>
-</div>
-<div class="one_third black">
-    <div class="title"><h2 class="red">Connect with me</h2></div>
-    <div class="elements">
-      <div class="icons">
-          <a href="http://twitter.com/amerine" class="social"><img src="/images/social_icon_twitter.png" /></a>
-          <a href="http://www.flickr.com/photos/mark_turner/" class="social"><img src="/images/social_icon_flickr.png" /></a>
-          <a href="http://www.linkedin.com/in/markaturner" class="social"><img src="/images/social_icon_linkedin.png" /></a>
-          <a href="http://vimeo.com/amerine" class="social"><img src="/images/social_icon_vimeo.png" /></a>
-          <div class="clear"></div>
-      </div>
-
-        <div class="citem">
-            <h3>Phone</h3>
-            <p>+1 (541) 306-3355</p>
-        </div>
-        <div class="citem">
-            <h3>Email</h3>
-            <p><a href="mailto:mark@amerine.net">mark@amerine.net</a></p>
-        </div>
-        <div class="citem last">
-            <h3>Gtalk</h3>
-            <p><a href="mailto:mark@amerine.net">mark@amerine.net</a></p>
-        </div>
-        <br/>
-      <div class="rss"><img src="/images/icon_rss.png" /><a href='http://feeds2.feedburner.com/amerine' class='float-right'>RSS Feed</a></div>
-    </div>	
-</div>
-<div class="clear"></div>
+  </div>
+  <div class="clear"></div>
 </section>

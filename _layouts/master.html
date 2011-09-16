@@ -10,6 +10,7 @@
 
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/syntax.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.animate-colors.js"></script>
@@ -24,7 +25,7 @@
 
   <body>
     <div id="top">
-      <div id="topwrapper">
+      <div id="topwrapper" class="container_12">
         <div id="logo">
           <p class="title">Mark Turner</p>
           <p class="slogan">Amerine on the Internet</p>
@@ -41,25 +42,31 @@
         </nav>
       </div>
     </div>
-    <div id="content">
-      {{content}}
+
+    <div class="container_12">
+      <div id="content">
+        {{content}}
+      </div>
+
+      <footer>
+        <div>
+          <p>Copyright &#169; 2011 <a href="http://amerine.net">Mark Turner</a>. All Rights Reserved. Hosted by <a href='http://github.com/amerine/amerine.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>.</p>
+        </div>
+      </footer>
     </div>
 
-    <footer>
-      <div>
-        <p>Copyright &#169; 2011 <a href="http://amerine.net">Mark Turner</a>. All Rights Reserved. Hosted by <a href='http://github.com/amerine/amerine.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>.</p>
-      </div>
-    </footer>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
+
     <script type="text/javascript">
       try {
         var pageTracker = _gat._getTracker("UA-251920-6");
         pageTracker._trackPageview();
       } catch(err) {}
     </script>
+
     <script src="http://static.getclicky.com/js" type="text/javascript"></script>
     <script type="text/javascript">clicky.init(119896);</script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/119896ns.gif" /></p></noscript>

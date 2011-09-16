@@ -1,462 +1,151 @@
 @import "/stylesheets/reset.css";
-body { 
-	background: #EFEFEF;
-	color: #666666;
-	font-size: 14px;
-	font-family: Arial,Helvetica,sans-serif;
+@import "/stylesheets/typography.css";
+@import "/stylesheets/960.css";
+
+
+body {
+  color: #2E2633;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 150%;
 }
 
-article, aside, dialog, figure, footer, header, hgroup, nav, section { display:block; }
-time { display: inline; }
+a {
+  color: #0065A7;
+  text-decoration: none;
+}
 
 @font-face {
-	font-family: 'BebasRegular';
-	src: url('/fonts/BEBAS___-webfont.eot');
-	src: local('BebasRegular'), url('/fonts/BEBAS___-webfont.woff') format('woff'), url('/fonts/BEBAS___-webfont.ttf') format('truetype'), url('/fonts/BEBAS___-webfont.svg#webfont') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'BebasRegular';
+  src: url('/fonts/BEBAS___-webfont.eot');
+  src: local('BebasRegular'), url('/fonts/BEBAS___-webfont.woff') format('woff'), url('/fonts/BEBAS___-webfont.ttf') format('truetype'), url('/fonts/BEBAS___-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-a { color: #0065A7; text-decoration: none; }
+#top {
+  height: 60px;
+  background: #222;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E1E1E1;
+}
 
-a:hover{text-decoration: underline; }
+  #top #logo {
+    position: absolute;
+    width: 50%;
+  }
 
-h1 { font-size: 24px; }
-h2 { font-size: 18px; }
-h3 { font-size: 14px;}
+  #top #logo p.title {
+    padding-top: 6px;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
+  }
 
-h1, h2, h3 { font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
+  #top #logo p.slogan {
+    font-size: 14px;
+    color: #9d9d9d;
+    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
+  }
 
-h1 {word-spacing:2px; padding-bottom: 15px;}
-h2 {word-spacing:1.5px; padding-bottom: 10px;}
-h3 {word-spacing:1px; padding-bottom: 5px;}
+#topwrapper nav {
+  float: right;
+  margin-top: 15px;
+}
 
-hr { border: 0 solid #e1e1e1; border-top-width: 1px; clear: both; height: 0; margin-top: 15px; padding-bottom: 10px;}
-ol { list-style: decimal; }
-ul { list-style: none; }
-li {}
-p{}
-pre {}
-code {}
-blockquote {}
+  #topwrapper #logo {
+    float: left;
+  }
 
-.alignleft { float: left; }
-.alignright { float: right; }
-.hide { display: none; }
-.clear{clear: both; height: 0px; line-height: 0px;}
-
-.one_quarter{float: left; width: 230px; margin-right: 10px;  }
-.two_quarter{float: left; width: 470px; margin-right: 10px;  }
-.three_quarter{float: left; width: 710px; margin-right: 10px;  }
-.full_page{float: left; width: 950px; margin-right: 10px;  }
-
-
-.one_third{float: left; width: 310px; margin-right: 10px;  }
-.two_third{float: left; width: 630px; margin-right: 10px;  }
-
-#top{height: 60px; background: #222; margin-bottom: 20px; border-bottom: 1px solid #E1E1E1;}
-#top #logo{position: absolute; width: 50%;}
-#top #logo img{float: left;}
-#top #logo p.title{padding-top: 3px;font-size: 24px; color: #ffffff; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
-#top #logo p.slogan{font-size: 14px; color: #9d9d9d; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
-#topwrapper{width: 970px; margin: 0 auto;}
-#topwrapper #logo{float: left;}
-#topwrapper nav{float: right; margin-top: 20px;}
 #menu {
-	list-style: none;
+  list-style: none;
 }
 
-#menu li {
-	float: left;
-	margin: 0 13px 0 0;
-	padding-bottom: 5px;
-	position: relative;
+  #menu li {
+    float: left;
+    margin: 0 13px 0 0;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  #menu li a {
+    display: block;
+    color: #bbb;
+    font-size: 14px;
+    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #menu li a:hover {
+    color: #0065A7;
+    text-decoration: none;
+  }
+
+  #menu li.current a {}
+
+.post h3 {
+  margin-bottom: 0;
 }
 
-#menu li a {
-	display: block;
-	color: #bbb;
-	font-size: 14px;
-	padding-bottom: 3px;
-	border-bottom: 1px solid #666;
-	font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
-
+#posts_aside {
+  float: right;
 }
-#menu li a:hover { 
-	color: #0065A7; 
-	text-decoration: none;
+
+pre {
+  overflow: auto;
+  background: #f6f6f6;
+  margin: 7px;
+  padding: 5px;;
+  margin-bottom: 1.80em;
+  border: 1px solid #E7E5DC;
+  color: black;
+  line-height: 100%;
+  font-family: "Consolas","Courier New",Courier,monospace;
 }
-#menu li.current a {}
-	
-	#menu ul {
-		background: #222; border: 1px solid #1b1b1a;	display: none;	padding: 5px;
-		list-style: none;	position: absolute;	left: 0; top: 100%;
-		z-index: 100;
-		-webkit-box-shadow: 1px 1px 3px #666;
-		-moz-box-shadow: 1px 1px 3px #666;
-		box-shadow: 1px 1px 3px #666;
-	}
-	
-	#menu li:hover > ul { display: block;  }
-	
-	#menu ul li {
-		float: none;
-		margin: 0 0px 0 0;
-		min-width: 120px;
-		padding: 0px;
-		padding-top: 2px;
-	}
-	#menu ul li  a{padding: 2px 0px;}
-	#menu ul li.last a{border-bottom: none;}
-	
-	pre {
-	  background: #f8f8f8;
-	  border: 1px solid #E7E5DC;
-	  border-width: 4px 2px 4px 2px;
-	  padding: 7px;
-	  overflow: auto;
-	  color: black;
-	  line-height: 120%;
-	  font-family: "Consolas","Courier New",Courier,monospace;
-	  font-size: 12px;
-	  letter-spacing: 0;
-	}
-	
-#content { 	width: 970px; margin: 0 auto; border: 1px solid #E1E1E1;}
-#content section#header{border: 10px solid #ffffff; background: #0065A7; padding: 15px 20px 20px 20px; }
-#content section#header h1{font-size: 24px; padding-bottom: 0px; color: #ffffff; /*text-shadow: 1px 1px 2px #444;*/}
-#content section#header p{width: 700px; font-size: 14px;  /*text-shadow: 1px 1px 1px #444;*/font-family: Georgia, 'Times New Roman', Times, serif; color: #ededed; font-style: italic;}
 
-#content section#slider{border: 10px solid #ffffff; background: #0065A7; padding: 20px 0px; text-align: center;}
-#content section#slider p{text-shadow: 1px 1px 2px #101010; color: #000; font-size: 32px;font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
-		#content section#slider #viewport{width: 950px;overflow: hidden;}
-        #content section#slider #container{width: 60000px;height: 350px;overflow: hidden; }
-        #content section#slider div.section {width: 950px;float: left;}
-		#content section#slider div.section .left{ width: 350px;float: left; height: 350px; text-align: right; }
-		#content section#slider div.section .right{width: 580px;float: right;padding-left: 20px; height: 350px; text-align: left; }
-		#content section#slider div.section .right p{color: #fff; padding-bottom: 10px;}
-		
-#content section#intro{border-top: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1; background: #f6f6f6; padding: 15px 20px 15px 20px;}
-#content section#intro h1{text-shadow: 1px 1px 2px #777;font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; color: #111; padding-bottom: 5px;}
-#content section#intro p{text-shadow: 1px 1px 2px #777; font-size: 18px;  font-family: Georgia, 'Times New Roman', Times, serif; color: #333; font-style: italic; padding-bottom: 10px;}
-#content section#intro a{display: block; width: 100%; text-align: right; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
+#posts time {
+  font-size: 1.4em;
+  margin-bottom: 1.5em;
+}
 
-#content section.main{background: #ffffff; padding: 10px 0px 10px 10px; }
-	#content section.main .white{text-rendering: optimizeLegibility;}
-	#content section.main .white img{display: block;margin-bottom: 5px;}
-	#content section.main .white h2{ height: 36px;  color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
-	#content section.main .white .elements{background-color: #f6f6f6 ;padding: 15px;}
-	#content section.main .white .elements h3{ color: #323232; padding-bottom: 5px; }
-	#content section.main .white .elements p{  padding-bottom: 10px; }
-	#content section.main .white .elements a{text-align: right; display: block; padding-top: 5px; border-top: 1px solid #e1e1e1; 
-	font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; color: #0065A7;}
+#posts article {
+  padding-bottom: 15px;
+}
 
-	#content section.main .black{background: #000000; padding-top: 5px;color: #cbcbcb; font-size: 12px;}
-	#content section.main .black div.title{border-bottom: 1px solid #1A1A1A; padding-bottom: 7px;}
-	#content section.main .black h2{ height: 36px; color: #ffffff; background: #0065A7; padding: 5px 10px 7px 15px;  display: inline;}
-	#content section.main .black p.tweet{height: 98px; padding: 15px; font-size: 14px; font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif;}
-	#content section.main .black h2.normal{ height: 36px; color: #0065A7; background: none; padding: 5px 10px 7px 15px;  display: inline;}
+#posts article div.title h1 {
+  margin-bottom: 0;
+}
 
-	#content section.main .black .icons{padding: 10px 0px 0px 10px;}
-	#content section.main .black .icons a.social{margin-right: 12px; margin-bottom: 10px; width: 32px; height: 32px; float: left;}
-	#content section.main .black .rss{border-top: 1px solid #1A1A1A; font-size: 11px; padding: 5px 0px 3px 10px;}
-	#content section.main .black .rss a{ color: #cbcbcb; padding-left: 5px;}
-	#content section.main .black .rss a:hover{ color: #0065A7;}
+#posts article div.elements {
+  padding-top: 1.5em;
+}
 
-#content section.portfolio{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
-	#content section.portfolio aside{background: #000000;}
-	#content section.portfolio aside .elements{padding: 15px;}
-	#content section.portfolio aside div.title{border-bottom: 1px solid #1A1A1A; padding: 5px 0px; padding-bottom: 7px;}
-	#content section.portfolio aside div.title h2{color: #ffffff; background: #0065A7; display: inline;padding: 5px 10px 7px 15px;}
-	#content section.portfolio aside h3{color: #fff; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;}
-	#content section.portfolio aside p{font-size: 12px; color: #cbcbcb; }
-	#content section.portfolio aside a.bottom{border-top: 1px solid #1A1A1A; padding: 5px 0px 5px 27px; display: block;
-		font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 12px;
-		background-image: url(/images/plus_li_black.png);
-		background-repeat: no-repeat;
-		background-position: 15px 9px;
-	}
-		
-	#content section.portfolio section{background: #f2f2f2; padding: 10px; width: 610px;}
-	#content section.portfolio section .images{background: #eee;}
+#posts article div.elements iframe {
+  padding-bottom: 15em;
+}
 
+#posts article div.elements blockquote {
+  padding: .4em;
+  background: #f6f6f6;
+}
 
-#content section.blog{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
-	#content section.blog aside{ float: left; width: 230px; margin-right: 10px; }
-	#content section.blog aside .block{background: #000000;margin-bottom: 10px; }	
-		#content section.blog aside h2{color: #ffffff;border-bottom: 1px solid #1a1a1a; padding: 5px 0px 7px 15px;}
-		#content section.blog aside ul {margin-left: 15px; width: 200px; padding-bottom: 10px;}
-		#content section.blog aside ul li{font-size: 12px; border-bottom: 1px solid #1a1a1a; }
-		#content section.blog aside ul li a{display: block;  padding: 3px 0px 4px 12px;
-			background-image: url(/images/plus_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 6px;}
-		#content section.blog aside ul li a:hover{background-color: #060606; text-decoration: none;}
-		
-		#content section.blog aside .popular div.minimenu{padding: 5px 0px 7px 0px; border-bottom: 1px solid #1a1a1a; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; font-size: 18px;}
-		#content section.blog aside .popular div.minimenu a{ display: inline;padding: 5px 15px 7px 15px; border-right: 1px solid #1a1a1a;}
-		#content section.blog aside .popular div.minimenu a.active{ color: #fff; background: #0065A7; display: inline;padding: 5px 15px 7px 15px; border-right: 1px solid #1a1a1a;}
-		#content section.blog aside .popular div.minimenu a:hover{text-decoration: none; color: #fff; background: #0065A7;}
-		#content section.blog aside .popular ul {padding-top: 10px;}
-		#content section.blog aside .popular ul li a{background-image: none;padding-left: 0px;}
-		
-		#content section.blog aside .tweet h2{padding-left: 0px;}
-		#content section.blog aside .tweet h2 div{color: #ffffff; background: #0065A7; display: inline;padding: 5px 10px 7px 15px;}
-		#content section.blog aside .tweet p{padding: 15px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; }
-		#content section.blog aside .tweet p a{color: #cbcbcb;}
-		#content section.blog aside .tweet p a:hover{color: #0065A7; text-decoration: none;}
-		#content section.blog aside div.tweet ul.tweet_list {color: #cbcbcb;font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
-		#content section.blog aside div.tweet ul.tweet_list a {background-image: none;}
-		#content section.blog aside div.tweet a.tweet_avatar {float: left; padding: 10px;}
-		
-		#content section.blog aside .rss{padding: 5px 0px 5px 31px;
-			background-image: url(/images/icon_rss.png);
-			background-repeat: no-repeat;
-			background-position: 10px 7px;
-		}
-		#content section.blog aside .rss a{font-size: 14px;  font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;	}
-		#content section.blog aside .rss a{color: #cbcbcb;}
-		#content section.blog aside .rss a:hover{color: #0065A7; text-decoration: none;}
+.contact {
+  padding: .4em;
+  background: #f6f6f6;
+}
 
-	#content section.blog #posts{float: left; width: 710px; margin-right: 10px;}
-	#content section.blog article{width: 710px; margin-bottom: 10px; padding-top: 25px;}
-		#content section.blog article .elements{text-rendering: optimizeLegibility; padding: 20px;}
-		#content section.blog article .title{ border-bottom: 1px solid #e1e1e1; padding: 0px 0px 0px 0px; }
-		#content section.blog article h1, #content section.blog article h2, #content section.blog article h3{color: #323232;}
-		#content section.blog article .title h1 {margin: 0px; padding: 0px;  float: left; width: 670px;}
-		#content section.blog article .title time{background: #f0f0f0; line-height: 13px;color: #0065A7; margin-top: -4px; padding-top: 6px;text-align: center; width: 40px; height: 36px; display: block; float: right;
-		font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 16px;}
-		#content section.blog article .title time span{font-size: 11px; }
-		#content section.blog article .title h1 a{background: #0065A7; color: #fff; padding: 4px 10px 6px 20px;}
-		#content section.blog article img{border: 5px solid #efefef; margin: 5px;}
-		#content section.blog article img.left{float: left; margin: 0px 10px 5px 0px;}
-		#content section.blog article img.right{float: left;margin: 0px 0px 5px 10px;}
-		#content section.blog article h2{text-shadow: 1px 1px 1px #bbb; margin-top: 16px;}
-		#content section.blog article h3{text-shadow: 1px 1px 1px #eeeeee;}
-		
-		#content section.blog article footer{background: none; height: 14px; padding: 3px 0px;font-size: 10px; color: #333; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;}
-		#content section.blog article footer div{padding: 0px; margin: 0px;}
-		#content section.blog article footer .metas{float: left;  width: 550px; padding-left: 5px;}
-		#content section.blog article footer .coms{float: right; width: 100px; text-align: right; padding-right: 5px;}
-		#content section.blog article p {padding-bottom: 14px;}
-		#content section.blog article p.big{color: #333; font-size: 18px; text-shadow: 1px 1px 2px #bbb; font-family: Georgia, 'Times New Roman', Times, serif;}
-		#content section.blog article blockquote{background: #f0f2f4; padding: 15px; 
-											font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
-		#content section.blog article ul{padding-left: 20px;}
-		#content section.blog article ul li{padding-left: 10px; padding-bottom: 5px;
-			background-image: url(/images/arrow_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 4px;
-		}
-		#content section.blog article p code {
-			background: #f8f8f8;
-  			font-size: 14px;
-  			font-family: "Consolas","Courier New",Courier,monospace;
-		}
-		
-		#content section.blog .prevnext{padding: 5px 0px; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
-		#content section.blog .prevnext .prev{float: left; margin-left: 10px;}
-		#content section.blog .prevnext .prev a{padding: 5px 10px 7px 34px; 
-			background-image: url(/images/blog_arrow_left_black.png);
-			background-repeat: no-repeat;
-			background-position: 10px 10px;
-		}
-		
-		#content section.blog .prevnext .prev a:hover{	background-color: #0065A7; color: #fff; text-decoration: none;}
-		#content section.blog .prevnext .next{float: right; margin-right: 10px;}
-		#content section.blog .prevnext .next a{padding: 5px 34px 7px 10px; 
-			background-image: url(/images/blog_arrow_right_black.png);
-			background-repeat: no-repeat;
-			background-position: 102px 10px;
-		}
-		#content section.blog .prevnext .next a:hover{	background-color: #0065A7; color: #fff; text-decoration: none;}
-		
-		#content section.blog article #comments{padding: 20px; }
-		#content section.blog article #comments .comment{margin-bottom: 20px;background: #f7f7f7; border-bottom: 1px solid #efefef;}
-		#content section.blog article #comments .comment .top{background: #efefef; padding: 5px 10px;}
-		#content section.blog article #comments .comment .top h2{float: left; padding-bottom: 0px; padding-left: 10px;text-shadow: none;}
-		#content section.blog article #comments .comment .top time{float: right; font-size: 11px; padding-top: 10px;}
-		#content section.blog article #comments .comment .bottom{padding: 15px 20px; font-size: 12px; line-height: 18px;}
-		/* comments form */
-		#content section.blog article #comments #form{padding: 20px;background: #f7f7f7; border: 1px solid #efefef;}
-		#content section.blog article #comments #form h2{text-shadow: none; background: #0065A7; padding: 5px 10px 5px 20px; margin-left: -20px; color: #fff; margin-bottom: 20px; float: left;}
-		#content section.blog article #comments #form p{padding-bottom: 10px;}
-		#content section.blog article #comments #form input, textarea {background: #fff; border: 1px solid #aeaeae; }
-		#content section.blog article #comments #form input{ font-size: 13px; width: 190px;}
-		#content section.blog article #comments #form input.btn{background: #0065A7; border: 1px solid #ffffff; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; font-size: 16px; color: #fff;  width: 70px; padding-bottom: 2px; float: right; margin-right: 20px;}
-		#content section.blog article #comments #form textarea{width: 100%; background: #fff; border: 1px solid #aeaeae;}
-		#content section.blog article #comments #form label{color: #999; font-size: 11px;}
-			
-/****** Contact *****/	
-#content section.contact{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
-	#content section.contact aside .block{background: #000000;margin-bottom: 10px; }	
-	#content section.contact aside h2{color: #0065A7;border-bottom: 1px solid #1a1a1a; padding: 5px 0px 7px 15px;}
-	#content section.contact aside .info p{padding-bottom: 15px; font-size: 12px; color: #cbcbcb;}
-	#content section.contact aside .info h3{color: #ffffff;}
-	#content section.contact .elements{padding: 20px;}
-	#content section.contact .map{background: #f2f2f2;}
-	
-	#content section.contact aside .cform div.title {border-bottom: 1px solid #1a1a1a; padding: 5px 0px 7px 0px;}
-	#content section.contact aside .cform div.title h2{color: #ffffff; background: #0065A7; display: inline;padding: 5px 10px 7px 15px;}
-		#content section.contact aside .cform #form{}
-		#content section.contact aside .cform #form h2{text-shadow: none; background: #0065A7; padding: 5px 10px 5px 20px; margin-left: -20px; color: #fff; margin-bottom: 20px; float: left;}
-		#content section.contact aside .cform #form p{padding-bottom: 20px;}
-		#content section.contact aside .cform #form p.area{padding-bottom: 10px;}
-		#content section.contact aside .cform #form input, textarea {background: #efefef; border: 1px solid #191917;  }
-		#content section.contact aside .cform #form input{ font-size: 13px; width: 190px; height: 24px; padding:0px 5px;}
-		#content section.contact aside .cform #form input.btn{background: #0065A7; border: 1px solid #1a1a1a; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; font-size: 16px; color: #fff;  width: 70px; padding-bottom: 2px; float: right;  margin-right: 20px;}
-		#content section.contact aside .cform #form textarea{width: 417px; padding: 5px;}
-		#content section.contact aside .cform #form label{color: #cbcbcb; font-size: 12px;}
-		#content section.contact aside .cform #form label span{color: #0065A7; font-weight: bold;}
-		
-	#content section.contact .map h2, #content section.contact .map h3{color: #333;}
-	#content section.contact .map img{border: 5px solid #efefef;}
-	#content section.contact .map ul{padding: 5px 0px 5px 10px;}
-		#content section.contact .map ul li{padding-left: 10px; padding-bottom: 5px; font-size: 12px; font-weight: bold; font-style: italic;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			background-image: url(/images/arrow_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 4px;
-		}
-		
+.black {
+  padding: .4em;
+  background: #222;
+  color: #fff;
+}
 
-#content section.pages{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
-	#content section.pages aside{background: #000000;}
-		#content section.pages aside h2{color: #ffffff;border-bottom: 1px solid #1a1a1a; padding: 5px 0px 7px 15px;}
-		#content section.pages aside ul {margin-left: 15px; width: 200px; padding-bottom: 10px;}
-		#content section.pages aside ul li{font-size: 12px; border-bottom: 1px solid #1a1a1a; 
-			
-		}
-		#content section.pages aside ul li a{display: block;  padding: 3px 0px 4px 12px;
-		background-image: url(/images/plus_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 6px;}
-		#content section.pages aside ul li a:hover{background-color: #060606; text-decoration: none;}
-	
-	#content section.pages section{background: #f2f2f2; padding: 20px; width: 670px;}
-		#content section.pages section img{border: 5px solid #efefef; margin: 5px;}
-		#content section.pages section h1, #content section.pages section h2, #content section.pages section h3{
-			color: #323232;	
-		}
-		#content section.pages section h1{text-shadow: 1px 1px 2px #bbb;}
-		#content section.pages section h2{text-shadow: 1px 1px 1px #bbb;}
-		#content section.pages section h3{text-shadow: 1px 1px 1px #eeeeee;}
-		
-		#content section.pages section .redtitle{color: #0065A7;}
-		#content section.pages section p.big{color: #333; font-size: 18px; text-shadow: 1px 1px 2px #bbb; font-family: Georgia, 'Times New Roman', Times, serif;}
-		#content section.pages section blockquote{background: #f0f2f4; padding: 15px; 
-											font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
-		#content section.pages section ul{padding-left: 20px;}
-		#content section.pages section ul li{padding-left: 10px; padding-bottom: 5px;
-			background-image: url(/images/arrow_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 4px;
-		}
-		#content section.pages section .half{width: 310px; float: left; padding-right: 40px;}
-		#content section.pages section .half p{font-size: 12px; line-height: 18px;}
-		
-		#content section.pages section .third{width: 200px; float: left; padding-right: 33px; }
-		#content section.pages section .third p{font-size: 12px; line-height: 18px;}
-		
-#content section.pages section .last{padding: 0px;}
+div.white_title h2, div.black h3 {
+  color: #fff;;
+}
 
-
-#content nav.menuamerine{   background: #f2f2f2; border-top: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1;}
-#content nav.menuamerine ul{height: 30px;}
-#content nav.menuamerine ul li{padding: 10px; padding-top: 7px; padding-bottom: 8px;border-right: 1px solid #E1E1E1;  float: left; color: #fff; font-size: 18px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;}
-#content nav.menuamerine ul li a{color: #333333;}
-#content nav.menuamerine ul li a:hover{color: #0065A7; text-decoration: none;}
-#content nav.menuamerine ul li a.active{color: #0065A7;}
-
-#content section.black{background: #0A0909; color: #cbcbcb;}
-#content section.black h1, #content section.black h2, #content section.black h3{color: #ffffff;}
-#content section.black h1{text-shadow: 2px 2px 1px #000000;}
-#content section.black hr{border-top: 1px solid #191917;}
-#content section.black p.big{text-shadow: 2px 2px 1px #000000;color: #9d9d9d;}
-#content section.black blockquote{ background: #000000; }
-#content section.black ul li{		
-			background-image: url(/images/arrow_li_white.png);
-			background-repeat: no-repeat;
-			background-position: 0px 4px;
-			}
-#content section.white{background: #ffffff; color: #666666;}
-#content section.white h1, #content section.white h2, #content section.white h3{color: #333333;}
-#content section.white h1{text-shadow: 1px 1px 2px #bbb;}
-#content section.white h2{/*text-shadow: 1px 1px 1px #bbb;*/}
-#content section.white hr{border-top: 1px solid #191917;}
-#content section.white p.big{text-shadow: 1px 1px 2px #bbb;color: #333;}
-#content section.white blockquote{ background: #f0f2f4; }
-#content section.white ul li{		
-			background-image: url(/images/arrow_li_black.png);
-			background-repeat: no-repeat;
-			background-position: 0px 4px;
-			}
-		
-#content section.pageamerine{ padding: 10px 0px 10px 10px;  margin-top: 10px;}
- 
-#content section.pageamerine h1{font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; padding-bottom: 5px;}
-#content section.pageamerine h2{padding-bottom: 5px; /*text-shadow: 1px 1px 1px #000000;*/}
-#content section.pageamerine hr{margin-right: 10px;}
-#content section.pageamerine blockquote{ padding: 15px; margin-right: 20px; margin-left: 10px;
-									font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;}
-#content section.pageamerine ul{padding-left: 20px;}
-#content section.pageamerine ul li{padding-left: 15px; padding-bottom: 5px;
-			
-		}
-#content section.pageamerine p.big{ font-size: 18px;  font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; padding-bottom: 10px;}
-#content section.pageamerine div.elements{padding: 10px 20px 10px 10px;}
-
-	#content section.pageamerine .white{background: #fff; color: #666;}
-	#content section.white .white{background: #f2f2f2; color: #666;}
-	#content section.pageamerine .white h2{color: #ffffff;}
-	#content section.pageamerine .white h3{color: #323232;}
-	#content section.pageamerine .white strong{color:#323232;}
-
-	
-	#content section.pageamerine .black{background: #000; color: #cbcbcb;}
-	#content section.pageamerine .black h2{color: #ffffff;}
-	#content section.pageamerine .black h3{color: #fff;}
-	#content section.pageamerine .black strong{color:#fff;}
-	
-
-	#content section.pageamerine .box{ font-size: 12px;}
-	#content section.pageamerine .box .contents{ padding: 15px;}
-	#content section.pageamerine .box img{margin-bottom: 10px;}
-	#content section.pageamerine .box a{color:#0065A7;}
-	#content section.pageamerine .box div.title{ min-width: 1px; background: #0065A7;margin-bottom: 10px; margin-right: 50px;padding: 0px; margin-left: -15px;}
-	#content section.pageamerine .box div.shorttitle{ margin-right: 100px;}
-	#content section.pageamerine .box div.title h2{ min-width: 1px; padding: 5px 10px 7px 15px;}
-	#content section.pageamerine .box h3{ font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;}
-	#github-projects div.box.white.one_quarter div.contents div.title {margin-right: 0px;}
-	
-#content section.footertop{background: #ffffff; padding: 10px 0px 10px 10px; margin-top: 10px;}
-	
-	#content section.footertop .black{background: #000000; padding-top: 5px;color: #cbcbcb; font-size: 12px;}
-	#content section.footertop .black a{color: #0065A7;}
-	#content section.footertop .black div.title{border-bottom: 1px solid #1A1A1A; padding-bottom: 7px;}
-	#content section.footertop .black div.title h2{ height: 36px; color: #ffffff; background: none; padding: 5px 10px 7px 15px;  display: inline;}
-	#content section.footertop .black div.title h2.boxed{ background: #0065A7; }
-	#content section.footertop .black div.title h2.red{ color: #0065A7; }
-	
-	#content section.footertop .black p{padding: 5px 0px; padding-bottom: 0px}
-	
-	#content section.footertop .black .elements{padding: 10px 15px;  min-height: 230px; }
-	#content section.footertop .black .elements .post{padding-bottom: 10px;}
-	#content section.footertop .black .elements .citem{padding-bottom: 15px;}
-	#content section.footertop .black .elements .last{padding-bottom: 0px;}
-	#content section.footertop .black .elements h3{color: #ffffff; display: inline; font-weight: normal; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;  }
-	#content section.footertop .black .elements time{font-size: 14px; color: #444444; padding-left: 5px; font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif; }
-	#content section.footertop .black .bottom{border-top: 1px solid #1A1A1A; padding: 5px 10px; text-align: right;}
-	#content section.footertop .black .bottom a{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px;}
-
-
-footer { background: #222222; height: 25px; padding-top: 15px; margin-top: 20px; font-size: 11px; color: #cbcbcb;	border-top: 1px solid #E1E1E1;}
-footer a {color: #0065A7;}
-footer div{width: 940px; margin: 0 auto;}
-footer p{float: left;}
-footer ul{ list-style: none;float: right;}
-footer ul li{float: left; padding-left: 15px;}
-footer ul li a{padding-right: 15px;}
-footer ul li a:hover{text-decoration: underline;}
-
-#github-projects div.box.white.one_quarter {margin-top: 15px;}
+footer {
+  padding-top: 1.5em;
+  font-size: .75em;
+}
