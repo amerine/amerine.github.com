@@ -1,4 +1,4 @@
-require 'active_support'
+require 'active_support/core_ext/string'
 
 desc "Begin a new post in _posts"
 task :post, :filename do |t, args|
