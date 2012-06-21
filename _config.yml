@@ -1,5 +1,5 @@
 pygments: true
-markdown: rdiscount
 server: true
 server_port: 4000
 paginate: 10
+

@@ -8,7 +8,7 @@ People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1
 
 I'm making a few assumptions:  
 
-1. You're on OS X Snow Leopard (x86_64) (Most of these instructions will work on any *nix box. Leave a comment if you have trouble.)
+1. You're on OS X Snow Leopard (x86_64) (Most of these instructions will work on any \*nix box. Leave a comment if you have trouble.)
 2. You have macports install (or readline installed somewhere else on your box) 
 
 ##Install Ruby Version Manager
