@@ -1,150 +1,161 @@
-@import "/stylesheets/typography.css";
-@import "/stylesheets/960.css";
-
-
 body {
-  color: #2E2633;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 150%;
+  /* font-family: lucida grande, tahoma, helvetica, arial, sans-serif; */
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5;
+  background: #efefef;
+  background: #fff;
 }
 
 a {
-  color: #0065A7;
+  color: #307EA9;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-weight: 100;
+  margin: 40px -30px 30px -30px;
+  padding: 15px 30px;
+}
+
+h2 {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 50px -30px 20px -30px;
+  padding: 15px 30px;
+}
+
+h3 {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 50px -30px 20px -30px;
+  padding: 15px 30px;
+}
+
+h1 a {
+  color: inherit;
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'BebasRegular';
-  src: url('/fonts/BEBAS___-webfont.eot');
-  src: local('BebasRegular'), url('/fonts/BEBAS___-webfont.woff') format('woff'), url('/fonts/BEBAS___-webfont.ttf') format('truetype'), url('/fonts/BEBAS___-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
+h1 .tiny {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+  width: 750px;
 }
 
 #top {
-  height: 60px;
-  background: #222;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #E1E1E1;
+  background-color: #2C2C2C;
+  opacity: .9;
 }
 
-  #top #logo {
-    position: absolute;
-    width: 50%;
-  }
-
-  #top #logo p.title {
-    padding-top: 6px;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 0;
-    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
-  }
-
-  #top #logo p.slogan {
-    font-size: 14px;
-    color: #9d9d9d;
-    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
-  }
-
-#topwrapper nav {
-  float: right;
-  margin-top: 15px;
+header.header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-  #topwrapper #logo {
-    float: left;
-  }
+header.header a {
+  color: #eee;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  font-weight: 100;
+}
+
+header.header a:hover {
+  color: #C2DEF9;
+}
+
+section.name {
+  float: left;
+  width: 375px;
+  height: 31px;
+  text-align: left;
+  margin: 0;
+}
+
+section.name h1 {
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+section.name h1 a {
+  line-height: 31px;
+  text-align: center;
+}
 
 #menu {
-  list-style: none;
-}
-
-  #menu li {
-    float: left;
-    margin: 0 13px 0 0;
-    padding-bottom: 5px;
-    position: relative;
-  }
-
-  #menu li a {
-    display: block;
-    color: #bbb;
-    font-size: 14px;
-    font-family: 'BebasRegular', Georgia, 'Times New Roman', Times, serif;
-  }
-
-  #menu li a:hover {
-    color: #0065A7;
-    text-decoration: none;
-  }
-
-  #menu li.current a {}
-
-.post h3 {
-  margin-bottom: 0;
-}
-
-#posts_aside {
+  width: 375px;
+  text-align: right;
   float: right;
+  margin: 0;
+  color: #666666;
+  height: 31px;
 }
 
-pre {
-  overflow: auto;
-  background: #f6f6f6;
-  margin: 7px;
-  padding: 5px;;
-  margin-bottom: 1.80em;
-  border: 1px solid #E7E5DC;
-  color: black;
-  line-height: 100%;
-  font-family: "Consolas","Courier New",Courier,monospace;
+#menu a {
+  margin-left: 20px;
+  float: right;
+  text-align: center;
+  line-height: 31px;
 }
 
-#posts time {
-  font-size: 1.4em;
-  margin-bottom: 1.5em;
+#menu a:hover {
+  text-decoration: underline;
 }
 
-#posts article {
-  padding-bottom: 15px;
+.posts {
+  margin: 0 0 25px 0;
+  padding: 0;
 }
 
-#posts article div.title h1 {
-  margin-bottom: 0;
+.posts li {
+  list-style: none;
+  padding: 7px 5px;
 }
 
-#posts article div.elements {
-  padding-top: 1.5em;
+.posts li:hover {
+  background-color: #eee;
 }
 
-#posts article div.elements iframe {
-  padding-bottom: 15em;
+.posts span.when {
+  padding-top: 3px;
+  float: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #666666;
 }
 
-#posts article div.elements blockquote {
-  padding: .4em;
-  background: #f6f6f6;
-}
-
-.contact {
-  padding: .4em;
-  background: #f6f6f6;
-}
-
-.black {
-  padding: .4em;
-  background: #222;
-  color: #fff;
-}
-
-div.white_title h2, div.black h3 {
-  color: #fff;;
+.content p {
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 25px 0;
 }
 
 footer {
   padding-top: 1.5em;
   font-size: .75em;
 }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

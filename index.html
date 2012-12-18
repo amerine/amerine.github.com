@@ -1,33 +1,17 @@
 ---
 layout: master
-title: Amerine on the Internet
-from_the_blog: 3
+title: Mark Turner
+from_the_blog: 1
 ---
 <section>
-  <div class="grid_5">
-    <div class="title"><h2>Hello</h2></div>
-    <div>
-      <p>My name is Mark Turner. I go by "amerine" on the internet. I'm a software engineer, father and husband.</p>
-      <p>I live in Portland, Oregon</p>
-      <p>I'm also an organizer of the annual <a href="http://ruby.onales.com">Ruby On Ales</a> conference. The first regional Ruby conference in Cascadia.</p>
-      <p style="text-align:center;"><a href="http://ruby.onales.com"><img alt="ruby on ales logo" src="/images/ruby_on_als_logo.png"/></a></p>
-    </div>
-    <div class="bottom"><h4><a href="about.html">More about me</a></h4></div>
-  </div>
+  <h1>Posts</h1>
 
-  <div class="grid_7 omega">
-    <div class="title"><h2>Recent blog posts</h2></div>
-    <div>
-      {% for post in site.posts %}
-      {% if forloop.index <= page.from_the_blog %}
-      <div class='post'>
-        <h3><a href="{{post.url}}">{{post.title}}</a></h3><time datetime="{{post.date}}">{{post.date | date_to_string}}</time>
-        <p>{{post.content | strip_html | truncate: 100}}</p>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-    <div class="bottom"><a href="blog.html">See all posts</a></div>
-  </div>
-  <div class="clear"></div>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li>
+      <span class="when">{{ post.date | date: "%B %d, %Y" }}</span>
+      <a href="{{post.url}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
