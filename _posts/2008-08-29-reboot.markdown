@@ -1,9 +1,0 @@
---- 
-title: Reboot
-typo_id: 3
-layout: post
----
-
-I decided that I wanted to move away from the Unix/Linux centric blog over at [http://www.counix.com](http://www.counix.com) and spend the time here talking about the WIDE range of things that interest me.
-
-Expect to see more soon.
