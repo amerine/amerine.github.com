@@ -12,14 +12,19 @@ I'm making a few assumptions:
 2. You have macports install (or readline installed somewhere else on your box) 
 
 ##Install Ruby Version Manager
-> Note: Just run this command and follow the instructions. 
+
+<div class="panel">
+  Note: Just run this command and follow the instructions. 
+</div>
 
 {% highlight console %}
 $ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 {% endhighlight %}
 
 ##Install Ruby 1.9.2
-> Note: Your readline directory may be in a different spot. 
+<div class="panel">
+Your readline directory may be in a different spot. 
+</div>
 
 {% highlight console %}
 $ rvm install 1.9.2 -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10

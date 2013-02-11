@@ -3,11 +3,11 @@ title: Rails::Rack::Metal
 typo_id: 17
 layout: post
 ---
-As usual there has been quit the storm over a commit in edge rails. [Link](http://is.gd/c1if)
+As usual there has been quite the storm over a commit in edge rails. [Link](http://is.gd/c1if)
 
 Some people don't understand Metal, but its pretty simple and I wanted to put out a post explaining it and hopefully you learn a little bit.
 
-Metal(s) allows you to design data access points that bypass most of the rails routing and rendering code. So instead of exposing data through normal controllers we can write better performing actions through metal(s).&nbsp;Metal allows you to run ruby right at the web server layer, and the main reason for that is speed.
+Metal(s) allows you to design data access points that bypass most of the rails routing and rendering code. So instead of exposing data through normal controllers we can write better performing actions through metal(s).
 
 In this example I am offering a simple service where someone can hit a URL('/grab/&lt;id&gt;' in this case) and get back the User objects name attribute.&lt;/id&gt;
 
@@ -40,6 +40,6 @@ class Grab < Rails::Rack::Metal
 end
 {% endhighlight %}
 
-This is a very simple example, but more complex ones are VERY easy to implement. Outputting XML or Binary data is just as easy as long as you know what the requester expects (application/xml for example)
+This is a very simple example, but more complex ones are VERY easy to implement. Outputting XML or binary data is just as easy.
 
 Its does require a more work to present data through Metal(s) but the speed benefits may come in handy on you're next project. I assume that anyone that has to provide an API would love to avoid some of the other rails &quot;baggage&quot; when processing requests.
