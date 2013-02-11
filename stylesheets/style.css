@@ -1,5 +1,4 @@
 body {
-  /* font-family: lucida grande, tahoma, helvetica, arial, sans-serif; */
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 100;
@@ -15,7 +14,6 @@ a {
 h1 {
   text-transform: uppercase;
   font-size: 26px;
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   font-weight: 100;
   margin: 40px -30px 30px -30px;
@@ -23,20 +21,18 @@ h1 {
 }
 
 h2 {
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
   margin: 50px -30px 20px -30px;
   padding: 15px 30px;
 }
 
 h3 {
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 100;
   margin: 50px -30px 20px -30px;
   padding: 15px 30px;
@@ -50,11 +46,6 @@ h1 a {
 h1 .tiny {
   font-size: 9px;
   text-transform: uppercase;
-}
-
-.container {
-  margin: 0 auto;
-  width: 750px;
 }
 
 #top {
@@ -79,7 +70,7 @@ header.header a {
 }
 
 header.header a:hover {
-  color: #C2DEF9;
+  color: #2795b6;
 }
 
 section.name {
@@ -95,7 +86,6 @@ section.name h1 {
   border-bottom: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
 }
 
 section.name h1 a {
@@ -107,7 +97,6 @@ section.name h1 a {
   width: 375px;
   text-align: right;
   float: right;
-  margin: 0;
   color: #666666;
   height: 31px;
 }
@@ -141,7 +130,7 @@ section.name h1 a {
   padding-top: 3px;
   float: right;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   color: #666666;
 }
 
@@ -151,9 +140,34 @@ section.name h1 a {
   margin: 25px 0;
 }
 
-footer {
+footer p {
   padding-top: 1.5em;
   font-size: .75em;
+}
+
+pre {
+  margin: 20px 0;
+  padding: 10px 5px 10px 15px;
+  border: 1px solid #eee;
+  border-left-width: 20px;
+  overflow: auto;
+  background-color: #f9f9f9;
+}
+
+code {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+article .title {
+  text-align: center;
+}
+
+article .title h1 {
+  text-transform: none;
+  font-size: 62px;
+  margin-bottom: 0;
 }
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }

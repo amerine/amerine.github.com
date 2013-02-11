@@ -5,6 +5,7 @@
     <meta name="description" content="Mark Turner is amerine on the internet" />
     <title>{{page.title}}</title>
     <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/foundation.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/syntax.css" rel="stylesheet" type="text/css" />
     <link rel='alternate' type='application/rss+xml' href='http://feeds.feedburner.com/amerine' />
@@ -13,7 +14,7 @@
 
   <body>
     <div id="top">
-      <div class="container">
+      <div class="row">
         <header class="header clearfix">
           <section class="name">
             <h1><a href="/"> Mark Turner </a></h1>
@@ -26,14 +27,12 @@
       </div>
     </div>
 
-    <div id="content" class="container">
+    <div id="content" class="row">
       {{content}}
     </div>
 
-    <footer>
-      <div class="container">
-        <p>Copyright &#169; {{ site.time | date: "%Y" }} <a href="http://amerine.net">Mark Turner</a>. All Rights Reserved. Hosted by <a href='http://github.com/amerine/amerine.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>.</p>
-      </div>
+    <footer class="row">
+      <p>Copyright &#169; {{ site.time | date: "%Y" }} <a href="http://amerine.net">Mark Turner</a>. All Rights Reserved. Hosted by <a href='http://github.com/amerine/amerine.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>.</p>
     </footer>
 
     <script type="text/javascript">
