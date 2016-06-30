@@ -1,4 +1,4 @@
-pygments: true
+highlighter: rouge
 server: true
 server_port: 4000
 paginate: 10
