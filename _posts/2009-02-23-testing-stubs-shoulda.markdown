@@ -1,7 +1,7 @@
---- 
+---
 title: Testing, Stubs & Shoulda from Hashrocket.
 typo_id: 21
-layout: post
+layout: master
 ---
 This was an interesting talk. I wouldn't mind spending a few hours with [Corey Haines](http://coreyhaines.com)
 

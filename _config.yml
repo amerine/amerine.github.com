@@ -1,5 +1,11 @@
 highlighter: rouge
 port: 4000
 paginate: 10
+permalink: pretty
 gems:
   - jekyll-paginate
+
+description: Mark Turner is amerine on the internet
+title: Mark Turner
+name: Mark Turner is <i>amerine</i> on the internet
+url: "http://amerine.net"

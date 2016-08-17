@@ -1,8 +1,8 @@
---- 
-title: "Fix Rails 3.0 `gem_original_require': no such file to load -- set (LoadError)"
-layout: post
 ---
-I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app. 
+title: "Fix Rails 3.0 `gem_original_require': no such file to load -- set (LoadError)"
+layout: master
+---
+I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app.
 
 He was getting the following error:
 {% highlight console %}
@@ -23,9 +23,9 @@ $ script/console
 	from script/console:2
 {% endhighlight %}
 
-This appears to only affect folks using RVM and Bundler. 
+This appears to only affect folks using RVM and Bundler.
 
-After a little sleuthing it appeared that RVM was setting a blank `GEM_HOME` environment variable when you leave the ruby version set to default. 
+After a little sleuthing it appeared that RVM was setting a blank `GEM_HOME` environment variable when you leave the ruby version set to default.
 {% highlight console %}
 $  env | grep GEM_HOME
 GEM_HOME=
@@ -37,9 +37,9 @@ There are two easy fixes
  or
 2) `rvm system`
 
-Both of these clear the `GEM_HOME` environment variable. 
+Both of these clear the `GEM_HOME` environment variable.
 
-aridlous dug around the bundler src after I helped him out and came back with the following tib-bit. I'd write a patch and probably will but I'm just too tired at the moment. 
+aridlous dug around the bundler src after I helped him out and came back with the following tib-bit. I'd write a patch and probably will but I'm just too tired at the moment.
 
 >interesting, but the bug seems to be possibly 2 things: empty GEM_HOME should not be used, and when the join occurs I think it is creating an invalid GEM_PATH=":/Users/User/.gem/ruby/1.8:/opt/local/lib/ruby/gems/1.8:" ... it should not have that leading ':'
 

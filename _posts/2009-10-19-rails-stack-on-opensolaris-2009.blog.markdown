@@ -1,8 +1,8 @@
 ---
-layout: post
 title: Rails Stack on OpenSolaris 2009.06
+layout: master
 ---
-I enjoy using [OpenSolaris](http://opensolaris.org) when I can, and I've been using it for a couple small Ruby on Rails deployments. I've received a few questions recently about deploying Ruby on Rails app on [OpenSolaris](http://opensolaris.org), so to kill a few 'birds' with one stone. I'm throwing this post together so that I can just point them here and let them run with it. 
+I enjoy using [OpenSolaris](http://opensolaris.org) when I can, and I've been using it for a couple small Ruby on Rails deployments. I've received a few questions recently about deploying Ruby on Rails app on [OpenSolaris](http://opensolaris.org), so to kill a few 'birds' with one stone. I'm throwing this post together so that I can just point them here and let them run with it.
 
 Sun has an easy to install meta-package called `amp` that includes Apache 2.2, Apache 2.2 DTrace probes, MySQL Server 5.1 & PHP. If you've never used Solaris/OpenSolaris before the `pfexec` command will seem foreign to you. Don't let it worry you its part of the Solaris RBAC (Role Based Access Control) by default the non-root user you created during the install has the `root` user role and can execute commands as root if you use `pfexec`.
 
@@ -34,7 +34,7 @@ Commands:
   $ git-1.6.0.6
   $ ./configure
   $ gmake
-  $ pfexec make install 
+  $ pfexec make install
   $ git --version
 {% endhighlight %}
 ## Apache Stack (AMP) ##
@@ -61,7 +61,7 @@ MySQL
 {% endhighlight %}
 
 ## Ruby & Ruby on Rails ##
-First we are going to use the Sun provided Ruby 1.8.7 package that also installs rubygems. Then we will update rubygems, install the gemcutter gem, add http://gems.github.com as a gem source (for legacy purposes), install the rails gems and finally modify our path to include the gem binaries. 
+First we are going to use the Sun provided Ruby 1.8.7 package that also installs rubygems. Then we will update rubygems, install the gemcutter gem, add http://gems.github.com as a gem source (for legacy purposes), install the rails gems and finally modify our path to include the gem binaries.
 {% highlight bash %}
   pfexec pkg install SUNWruby18
   pfexec gem update --system
@@ -78,28 +78,28 @@ First we are going to use the Sun provided Ruby 1.8.7 package that also installs
 Mysql:
 {% highlight bash %}
   pfexec gem install mysql -- --with-mysql-dir=/usr/mysql/5.1
-{% endhighlight %}	
+{% endhighlight %}
 sqlite3
 {% highlight bash %}
   pfexec gem install sqlite3-ruby
-{% endhighlight %}	
-	
+{% endhighlight %}
+
 ## Passenger Installation ###
-We need to install fastthread and passenger, then configure apache to use it. We're going to install passenger from source as it fixes a bug with the use of PTHREAD_STACK_MIN (See [here](http://code.google.com/p/phusion-passenger/issues/detail?id=369)) This is fixed in passenger 2.2.6 and I will update this when that is released. 
+We need to install fastthread and passenger, then configure apache to use it. We're going to install passenger from source as it fixes a bug with the use of PTHREAD_STACK_MIN (See [here](http://code.google.com/p/phusion-passenger/issues/detail?id=369)) This is fixed in passenger 2.2.6 and I will update this when that is released.
 {% highlight bash %}
   pfexec gem install fastthread
   cd /opt/src
   git clone git://github.com/FooBarWidget/passenger.git
   cd passenger
   pfexec ./bin/passenger-install-apache2-module
-{% endhighlight %}	
+{% endhighlight %}
 ### Apache Configuration ###
 We're going to keep the passenger configuration in it's own file to keep the httpd.conf clean.
 
 Create the file:
 {% highlight bash %}
   touch /etc/apache2/2.2/conf.d/passenger.conf
-{% endhighlight %}	
+{% endhighlight %}
 Paste the lines from the passenger-install-apache2-module command in that file. My file contains the following:
 {% highlight bash %}
   LoadModule passenger_module /opt/src/passenger/ext/apache2/mod_passenger.so
@@ -107,7 +107,7 @@ Paste the lines from the passenger-install-apache2-module command in that file. 
   PassengerRuby /usr/ruby/1.8/bin/ruby
 {% endhighlight %}
 ## Let's Test ##
-Lets create a little rails app to verify that rails and passenger 
+Lets create a little rails app to verify that rails and passenger
 {% highlight bash %}
   pfexec mkdir -p /data/apps
   pfexec chown -R mturner:staff /data/apps
@@ -116,11 +116,11 @@ Lets create a little rails app to verify that rails and passenger
   cd test
   ./script/generate controller helloworld index
   pfexec chown -R webservd:webservd test
-{% endhighlight %}	
-Lets add a vhost config for apache. 
+{% endhighlight %}
+Lets add a vhost config for apache.
 {% highlight bash %}
   pfexec vim /etc/apache2/2.2/conf.d/test-site.conf
-{% endhighlight %}	
+{% endhighlight %}
 Here is the contents of my file:
 {% highlight bash %}
 		<VirtualHost *:80>
@@ -133,15 +133,15 @@ Here is the contents of my file:
 		      Order allow,deny
 		      Allow from all
 		     </Directory>
-     
+
 		</VirtualHost>
 {% endhighlight %}
 Add `127.0.0.1 test-site.com` to `/etc/hosts`
-	
+
 Restart Apache
 {% highlight bash %}
   pfexec svcadm restart http:apache22
-{% endhighlight %}	
+{% endhighlight %}
 Test the site in apache and you see the following:
 {% highlight ruby %}
   Helloworld#index

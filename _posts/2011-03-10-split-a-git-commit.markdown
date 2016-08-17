@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Split a git commit
+layout: master
 ---
 
 This is a little rough, but I thought I would share a little screencast I did for a colleague.

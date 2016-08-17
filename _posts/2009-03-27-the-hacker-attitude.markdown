@@ -1,7 +1,7 @@
---- 
+---
 title: The Hacker Attitude
 typo_id: 24
-layout: post
+layout: master
 ---
 
 The Hacker Attitude
@@ -14,5 +14,5 @@ The Hacker Attitude
 
 Every once in a while we need to remind our peers what we're all about and show them how to get there.
 
-See the full paper here:  
+See the full paper here:
 [http://catb.org/~esr/faqs/hacker-howto.html](http://catb.org/~esr/faqs/hacker-howto.html "Eric Raymond Hacker Howto")

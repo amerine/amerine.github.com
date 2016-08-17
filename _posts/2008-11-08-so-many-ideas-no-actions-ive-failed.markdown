@@ -1,7 +1,7 @@
---- 
+---
 title: So many Ideas. No actions. I've failed. I'm going to fix it.
 typo_id: 14
-layout: post
+layout: master
 ---
 I have came to the realization tonight that I've failed at working on any of the ideas I've had outside of $work (including blogging here and @ [counix.com](http://www.counix.com)). Most of the projects that I have thought about personally have never seen the light of day. Now I'm sitting here writing this in hopes that I can figure out what the problem is. Is there such thing as "personal developer block"
 

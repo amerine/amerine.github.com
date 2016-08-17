@@ -1,7 +1,7 @@
---- 
+---
 title: Rails::Rack::Metal
 typo_id: 17
-layout: post
+layout: master
 ---
 As usual there has been quite the storm over a commit in edge rails. [Link](http://is.gd/c1if)
 

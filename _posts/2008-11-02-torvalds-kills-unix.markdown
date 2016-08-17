@@ -1,7 +1,7 @@
---- 
+---
 title: Torvalds Kills Unix
 typo_id: 11
-layout: post
+layout: master
 ---
 Funny things happen when you play games.... They seem to mimic reality.
 

@@ -1,6 +1,6 @@
 ---
-layout: post
 title: "Goodbye Bend"
+layout: master
 ---
 
 Goodbye Bend, Hello Portland!
@@ -27,11 +27,11 @@ sure we as technologists have close ties to others with same interests in our
 communities. Twitter and Facebook make that easier today, but there is nothing
 like a quick chat and a beer to keep a group of hackers together.
 
-I'll miss these groups the most:  
-[Hack Night Bend ](http://www.meetup.com/hack-night-bend/)  
-[BendUG](http://bendug.org)  
-[COWPU](http://cowpu.com)  
-[COISUG](http://coisug.info)  
+I'll miss these groups the most:
+[Hack Night Bend ](http://www.meetup.com/hack-night-bend/)
+[BendUG](http://bendug.org)
+[COWPU](http://cowpu.com)
+[COISUG](http://coisug.info)
 
 > Note: I'm still organizing the Ruby on Ales conference. No way I'm leaving that amazing event behind.
 

@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Actual Sarah Palin Supporters
+layout: master
 ---
 
 I saw this over at [Giles Bowkett's Blog](http://gilesbowkett.blogspot.com/2009/12/real-palin-supporters-not-actors.html) and just had to share it here. Thanks Giles!
