@@ -103,7 +103,9 @@
         </div>
 
         <footer>
-          {% include pagination.html %}
+          {% if page.pagination %}
+            {% include pagination.html %}
+          {% endif %}
         </footer>
       </article>
     </section>
