@@ -1,0 +1,39 @@
+I"�<p>As usual there has been quite the storm over a commit in edge rails. <a href="http://is.gd/c1if">Link</a></p>
+
+<p>Some people don’t understand Metal, but its pretty simple and I wanted to put out a post explaining it and hopefully you learn a little bit.</p>
+
+<p>Metal(s) allows you to design data access points that bypass most of the rails routing and rendering code. So instead of exposing data through normal controllers we can write better performing actions through metal(s).</p>
+
+<p>In this example I am offering a simple service where someone can hit a URL(‘/grab/&lt;id&gt;’ in this case) and get back the User objects name attribute.&lt;/id&gt;</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Allow the metal piece to run in isolation</span>
+<span class="nb">require</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="kp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/../../config/environment"</span><span class="p">)</span> <span class="k">unless</span> <span class="k">defined?</span><span class="p">(</span><span class="no">Rails</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Grab</span> <span class="o">&lt;</span> <span class="no">Rails</span><span class="o">::</span><span class="no">Rack</span><span class="o">::</span><span class="no">Metal</span>
+  <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">env</span><span class="p">[</span><span class="s2">"PATH_INFO"</span><span class="p">]</span> <span class="o">=~</span> <span class="sr">/^\/grab/</span>
+      <span class="n">request</span> <span class="o">=</span> <span class="n">env</span><span class="p">[</span><span class="s1">'REQUEST_URI'</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="nf">size</span> <span class="o">!=</span> <span class="mi">3</span>
+        <span class="n">response_text</span> <span class="o">=</span> <span class="s2">"No ID Provided"</span>
+        <span class="n">response_code</span> <span class="o">=</span> <span class="mi">200</span>
+      <span class="k">else</span>
+        <span class="k">begin</span>
+          <span class="n">username</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">request</span><span class="p">[</span><span class="mi">2</span><span class="p">]).</span><span class="nf">name</span>
+          <span class="n">response_text</span> <span class="o">=</span> <span class="n">username</span>
+          <span class="n">response_code</span> <span class="o">=</span> <span class="mi">200</span>
+        <span class="k">rescue</span>
+          <span class="n">response_text</span> <span class="o">=</span> <span class="s2">"Request Failed"</span>
+          <span class="n">response_code</span> <span class="o">=</span> <span class="mi">400</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+      <span class="p">[</span><span class="n">response_code</span><span class="p">.</span><span class="nf">to_i</span><span class="p">,</span> <span class="p">{</span><span class="s2">"Content-Type"</span> <span class="o">=&gt;</span> <span class="s2">"text/html"</span><span class="p">},</span> <span class="n">response_text</span><span class="p">]</span>
+    <span class="k">else</span>
+      <span class="k">super</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This is a very simple example, but more complex ones are VERY easy to implement. Outputting XML or binary data is just as easy.</p>
+
+<p>Its does require a more work to present data through Metal(s) but the speed benefits may come in handy on you’re next project. I assume that anyone that has to provide an API would love to avoid some of the other rails "baggage" when processing requests.</p>
+:ET

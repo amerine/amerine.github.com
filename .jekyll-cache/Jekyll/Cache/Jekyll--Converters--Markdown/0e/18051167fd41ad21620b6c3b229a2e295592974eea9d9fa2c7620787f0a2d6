@@ -1,0 +1,15 @@
+I"�<p>If you connect to Solaris 9 from a OS X or any recent Linux box via SSH, chances are your terminal is set to xterm-color. If you try to use vi or anything you’ll see an error like below:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">xterm-color: Unknown terminal <span class="nb">type</span></code></pre></figure>
+
+<p>Its easy enough to change the terminal declaration in the preference dialog… but why not teach Solaris 9 to handle the xterm-color terminal type?</p>
+
+<p>This assumes you have the sun freeware tools installed in /usr/sfw/bin.</p>
+
+<p>Download <a href="http://amerine.net/files/xterm-color">this file</a> and place it in /usr/share/lib/terminfo/x/ Example:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /usr/share/lib/terminfo/x/
+/usr/sfw/bin/wget http://amerine.net/files/xterm-color</code></pre></figure>
+
+<p>Now that annoying error won’t stop vi from working. Enjoy.</p>
+:ET

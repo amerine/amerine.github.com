@@ -1,0 +1,118 @@
+I"<p>##Intro
+People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2 installed. I’m tossing this up here to have something to point people to when they have questions.</p>
+
+<p>I’m making a few assumptions:</p>
+
+<ol>
+  <li>You’re on OS X Snow Leopard (x86_64) (Most of these instructions will work on any *nix box. Leave a comment if you have trouble.)</li>
+  <li>You have macports install (or readline installed somewhere else on your box)</li>
+</ol>
+
+<p>##Install Ruby Version Manager</p>
+
+<div class="panel">
+  Note: Just run this command and follow the instructions.
+</div>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>bash &lt; &lt;<span class="o">(</span> curl http://rvm.beginrescueend.com/releases/rvm-install-head <span class="o">)</span></code></pre></figure>
+
+<p>##Install Ruby 1.9.2</p>
+<div class="panel">
+Your readline directory may be in a different spot.
+</div>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>rvm <span class="nb">install </span>1.9.2 <span class="nt">-C</span> <span class="nt">--with-readline-dir</span><span class="o">=</span>/opt/local,--build<span class="o">=</span>x86_64-apple-darwin10
+<span class="go">Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-p0
+
+Running autoconf
+
+Configuring ruby-1.9.2-p0, this may take a while depending on your cpu(s)...
+
+Compiling ruby-1.9.2-p0, this may take a while, depending on your cpu(s)...
+
+Installing ruby-1.9.2-p0
+
+Installation of ruby-1.9.2-p0 is complete.
+
+Updating rubygems for ruby-1.9.2-p0
+
+Installing gems for ruby-1.9.2-p0.
+
+Installing rake
+
+Installation of gems for ruby-1.9.2-p0 is complete.
+
+</span><span class="gp">$</span><span class="w"> </span>rvm 1.9.2
+<span class="go">
+</span><span class="gp">$</span><span class="w"> </span>ruby <span class="nt">-v</span>
+<span class="go">ruby 1.9.2p0</span></code></pre></figure>
+
+<p>##Create a Rails 3.0 Gem set and switch to it
+This processes allows us to isolate the Rails 3.0 environment gems.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>rvm use <span class="nt">--create</span> 1.9.2@rails3</code></pre></figure>
+
+<p>##Install the Rails 3.0 Gems and dependencies</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>gem <span class="nb">install </span>sqlite3-ruby
+<span class="gp">$</span><span class="w"> </span><span class="nb">env </span><span class="nv">ARCHFLAGS</span><span class="o">=</span><span class="s2">"-arch x86_64"</span> gem <span class="nb">install </span>mysql <span class="nt">--</span> <span class="nt">--with-mysql-config</span><span class="o">=</span>/usr/local/mysql/bin/mysql_config
+<span class="gp">$</span><span class="w"> </span>gem <span class="nb">install </span>rails</code></pre></figure>
+
+<p>##Done
+Hopefully everything worked:</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby <span class="nt">-v</span>
+<span class="go">  ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
+</span><span class="gp">$</span><span class="w"> </span>rails <span class="nt">--version</span>
+<span class="go">  Rails 3.0.0
+</span><span class="gp">$</span><span class="w"> </span>gem list
+<span class="go">  *** LOCAL GEMS ***
+
+  abstract (1.0.0)
+  actionmailer (3.0.0)
+  actionpack (3.0.0)
+  activemodel (3.0.0)
+  activerecord (3.0.0)
+  activeresource (3.0.0)
+  activesupport (3.0.0)
+  arel (1.0.1)
+  builder (2.1.2)
+  bundler (1.0.0.rc.5)
+  erubis (2.6.6)
+  i18n (0.4.1)
+  mail (2.2.5)
+  memcache-client (1.8.5)
+  mime-types (1.16)
+  mysql (2.8.1)
+  rack (1.2.1)
+  rack-mount (0.6.12)
+  rack-test (0.5.4)
+  rails (3.0.0)
+  railties (3.0.0)
+  rake (0.8.7)
+  sqlite3-ruby (1.3.1)
+  text-format (1.0.0)
+  text-hyphen (1.0.0)
+  thor (0.14.0)
+  tzinfo (0.3.22)</span></code></pre></figure>
+
+<p>##Switching back to your system Ruby
+<code class="highlighter-rouge">rvm system</code></p>
+
+<p>##Back to your Rails3.0 environment
+<code class="highlighter-rouge">rvm 1.9.2@rails3</code></p>
+
+<p>##Use your RVM environment as your Default
+<code class="highlighter-rouge">rvm 1.9.2@rails3 --default</code></p>
+
+<p>Read more about RVM over at <a href="http://rvm.beginrescueend.com/">http://rvm.beginrescueend.com/</a></p>
+
+<p>###Update 04/16/2010
+Updated to reflect the recent changes in RVM.</p>
+
+<p>###Update 08/18/2010
+Updated to use the production release of 1.9.2</p>
+
+<p>###Update 08/30/2010
+Updated to reflect the Rails 3.0 release.</p>
+:ET

@@ -1,0 +1,45 @@
+I"G<p>I was assisting aridlous on irc while he was experiencing an issue launching the rails console in a Rails 3.0 beta app.</p>
+
+<p>He was getting the following error:</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>script/console
+<span class="go">/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- set (LoadError)
+	from /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/resolver.rb:1
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:95:in `specs'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:81:in `specs_for'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler/runtime.rb:18:in `setup'
+	from /opt/local/lib/ruby/gems/1.8/gems/bundler-0.9.7/lib/bundler.rb:66:in `setup'
+	from /Users/User/dev/sekret/config/../config/preinitializer.rb:34
+	from /Users/User/dev/sekret/config/boot.rb:28:in `load'
+	from /Users/User/dev/sekret/config/boot.rb:28:in `preinitialize'
+	from /Users/User/dev/sekret/config/boot.rb:10:in `boot!'
+	from /Users/User/dev/sekret/config/boot.rb:129
+	from script/console:2:in `require'
+	from script/console:2</span></code></pre></figure>
+
+<p>This appears to only affect folks using RVM and Bundler.</p>
+
+<p>After a little sleuthing it appeared that RVM was setting a blank <code class="highlighter-rouge">GEM_HOME</code> environment variable when you leave the ruby version set to default.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w">  </span><span class="nb">env</span> | <span class="nb">grep </span>GEM_HOME
+<span class="go">GEM_HOME=</span></code></pre></figure>
+
+<p>There are two easy fixes</p>
+
+<p>1) <code class="highlighter-rouge">unset GEM_HOME</code>
+ or
+2) <code class="highlighter-rouge">rvm system</code></p>
+
+<p>Both of these clear the <code class="highlighter-rouge">GEM_HOME</code> environment variable.</p>
+
+<p>aridlous dug around the bundler src after I helped him out and came back with the following tib-bit. I’d write a patch and probably will but I’m just too tired at the moment.</p>
+
+<blockquote>
+  <p>interesting, but the bug seems to be possibly 2 things: empty GEM_HOME should not be used, and when the join occurs I think it is creating an invalid GEM_PATH=”:/Users/User/.gem/ruby/1.8:/opt/local/lib/ruby/gems/1.8:” … it should not have that leading ‘:’</p>
+</blockquote>
+
+<p>UPDATE: <a href="http://github.com/carlhuda/bundler/issues/issue/133">Filed an issue in Bundlers issue tracker</a></p>
+
+<p>UPDATE 2: <a href="http://github.com/carlhuda/bundler/commit/55509f23693bb344696d1dfa7fa0f0eb2108adf6">Fixed in 55509f</a></p>
+:ET
