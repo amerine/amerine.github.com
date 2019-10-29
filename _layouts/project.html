@@ -13,7 +13,9 @@ layout: default
 			<h2 class="post__subtitle subtitle--light">{{ page.subtitle }}</h2>
 		</div>
 
+		{% if page.featured_image != '' %}
 		<img src="{{ '/images/projects/' | relative_url}}{{ page.featured_image }}" class="post__featured-image">
+		{% endif %}
 
 	</header>
 
