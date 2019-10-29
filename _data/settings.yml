@@ -16,6 +16,16 @@ menu_settings:
 hero_settings:
   background_image: /images/backgrounds/background-hero.svg
 
+social_settings:
+  twitter_url: 'https://twitter.com/amerine'
+  instagram_url: 'https://instagram.com/amerine'
+  youtube_url: ''
+  vimeo_url: ''
+  medium_url: 'https://medium.com/@amerine'
+  github_url: 'https://github.com/amerine'
+  linkedin_url: ''
+
+
 color_settings:
   background_color: '#ffffff'
   background_alt_color: '#f4f5f6'

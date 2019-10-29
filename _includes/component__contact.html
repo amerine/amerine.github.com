@@ -5,12 +5,11 @@
     <div class="contact__wrap">
       <header class="contact__header">
         <h2 class="title">Get In Touch</h2>
-        <p class="subtitle--light">Prefer using email? Say hi at <a
-            href="mailto: {{ site.data.settings.contact_settings.email_address }}">{{ site.data.settings.contact_settings.email_address }}</a>
+        <p class="subtitle--light">Prefer using email? Say hi at <a href="mailto:yo@amerine.net">yo@amerine.net</a>
         </p>
       </header>
 
-      <form method="POST" action="{{ site.data.settings.contact_settings.form_action }}" class="contact__form">
+      <form method="POST" action="https://formspree.io/xeqjrggl" class="contact__form">
         <div class="input-group">
           <label for="name">Your Name</label>
           <input type="text" name="name" id="name" placeholder="What should I call you?" />
@@ -26,12 +25,12 @@
           <textarea name="message" id="message" placeholder="What’s on your mind?" rows="4"></textarea>
         </div>
 
-        <input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
-        <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
+        <input type="hidden" name="_next" value="https://amerine.net/thanks" />
+        <input type="hidden" name="_subject" value="Website Contact Made" />
         <input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
 
         <div class="input-submit">
-          <input type="submit" class="button--fill" value="{{ site.data.settings.contact_settings.send_button_text }}">
+          <input type="submit" class="button--fill" value="shoot">
         </div>
       </form>
     </div>
