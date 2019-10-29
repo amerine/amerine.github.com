@@ -1,6 +1,7 @@
 ---
 title: So many Ideas. No actions. I've failed. I'm going to fix it.
 date: 2008-11-08 00:00:00 -0800
+featured_image: '/images/fail.jpg'
 ---
 I have came to the realization tonight that I've failed at working on any of the ideas I've had outside of $work (including blogging here and @ [counix.com](http://www.counix.com)). Most of the projects that I have thought about personally have never seen the light of day. Now I'm sitting here writing this in hopes that I can figure out what the problem is. Is there such thing as "personal developer block"
 
@@ -11,7 +12,6 @@ So what's the problem at home? Why can't I find that same passion for the person
 Don't get me wrong, I am constantly hacking.. its just never projects just little chunks of code or routines here and there but nothing seems to evolve into a full blown projects.
 
 <p style="text-align: center; ">Why have I failed?</p>
-<p style="text-align: center; ">&nbsp;<img width="300" height="188" alt="fail dog" src="http://amerine.net/images/fail.jpg" /></p>
 
 I think I know what's wrong:
 

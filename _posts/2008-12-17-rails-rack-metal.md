@@ -10,7 +10,7 @@ Metal(s) allows you to design data access points that bypass most of the rails r
 
 In this example I am offering a simple service where someone can hit a URL('/grab/&lt;id&gt;' in this case) and get back the User objects name attribute.&lt;/id&gt;
 
-{% highlight ruby %}
+```ruby
 # Allow the metal piece to run in isolation
 require(File.dirname(__FILE__) + "/../../config/environment") unless defined?(Rails)
 
@@ -37,7 +37,7 @@ class Grab < Rails::Rack::Metal
     end
   end
 end
-{% endhighlight %}
+```
 
 This is a very simple example, but more complex ones are VERY easy to implement. Outputting XML or binary data is just as easy.
 

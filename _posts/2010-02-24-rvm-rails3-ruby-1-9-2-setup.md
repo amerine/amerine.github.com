@@ -2,7 +2,8 @@
 title: Rails 3.0 Setup using rvm & Ruby 1.9.2
 date: 2010-02-24 00:00:00 -0800
 ---
-##Intro
+
+## Intro
 People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2 installed. I'm tossing this up here to have something to point people to when they have questions.
 
 
@@ -11,22 +12,15 @@ I'm making a few assumptions:
 1. You're on OS X Snow Leopard (x86_64) (Most of these instructions will work on any \*nix box. Leave a comment if you have trouble.)
 2. You have macports install (or readline installed somewhere else on your box)
 
-##Install Ruby Version Manager
+## Install Ruby Version Manager
 
-<div class="panel">
-  Note: Just run this command and follow the instructions.
-</div>
-
-{% highlight console %}
+```sh
 $ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
-{% endhighlight %}
+```
 
-##Install Ruby 1.9.2
-<div class="panel">
-Your readline directory may be in a different spot.
-</div>
+## Install Ruby 1.9.2
 
-{% highlight console %}
+```sh
 $ rvm install 1.9.2 -C --with-readline-dir=/opt/local,--build=x86_64-apple-darwin10
 Installing Ruby from source to: /Users/mturner/.rvm/rubies/ruby-1.9.2-p0
 
@@ -52,27 +46,28 @@ $ rvm 1.9.2
 
 $ ruby -v
 ruby 1.9.2p0
-{% endhighlight %}
+```
 
 
-##Create a Rails 3.0 Gem set and switch to it
+## Create a Rails 3.0 Gem set and switch to it
 This processes allows us to isolate the Rails 3.0 environment gems.
-{% highlight console %}
+```sh
 $ rvm use --create 1.9.2@rails3
-{% endhighlight %}
+```
 
 
-##Install the Rails 3.0 Gems and dependencies
-{% highlight console %}
+## Install the Rails 3.0 Gems and dependencies
+```sh
 $ gem install sqlite3-ruby
 $ env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 $ gem install rails
-{% endhighlight %}
+```
 
 
-##Done
+## Done
 Hopefully everything worked:
-{% highlight console %}
+
+```sh
 $ ruby -v
   ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
 $ rails --version
@@ -107,24 +102,24 @@ $ gem list
   text-hyphen (1.0.0)
   thor (0.14.0)
   tzinfo (0.3.22)
-{% endhighlight %}
+```
 
-##Switching back to your system Ruby
+## Switching back to your system Ruby
 `rvm system`
 
-##Back to your Rails3.0 environment
+## Back to your Rails3.0 environment
 `rvm 1.9.2@rails3`
 
-##Use your RVM environment as your Default
+## Use your RVM environment as your Default
 `rvm 1.9.2@rails3 --default`
 
 Read more about RVM over at [http://rvm.beginrescueend.com/](http://rvm.beginrescueend.com/)
 
-###Update 04/16/2010
+### Update 04/16/2010
 Updated to reflect the recent changes in RVM.
 
-###Update 08/18/2010
+### Update 08/18/2010
 Updated to use the production release of 1.9.2
 
-###Update 08/30/2010
+### Update 08/30/2010
 Updated to reflect the Rails 3.0 release.
