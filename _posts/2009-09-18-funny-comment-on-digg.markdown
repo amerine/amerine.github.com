@@ -1,6 +1,6 @@
 ---
 title: Funny comment on Digg
-layout: master
+date: 2009-09-18 00:00:00 -0800
 ---
 
 I loved the first comment to [this](http://digg.com/politics/Bill_O_Reilly_Backs_Public_Option_VIDEO) post on digg.

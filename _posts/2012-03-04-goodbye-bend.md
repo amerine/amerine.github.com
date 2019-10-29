@@ -1,6 +1,6 @@
 ---
 title: "Goodbye Bend"
-layout: master
+date: 2012-03-24 00:00:00 -0800
 ---
 
 Goodbye Bend, Hello Portland!

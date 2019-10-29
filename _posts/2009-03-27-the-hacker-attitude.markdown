@@ -1,7 +1,6 @@
 ---
 title: The Hacker Attitude
-typo_id: 24
-layout: master
+date: 2009-03-27 00:00:00 -0800
 ---
 
 The Hacker Attitude

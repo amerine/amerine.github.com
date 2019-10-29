@@ -1,6 +1,6 @@
 ---
 title: Rails 3.0 Setup using rvm & Ruby 1.9.2
-layout: master
+date: 2010-02-24 00:00:00 -0800
 ---
 ##Intro
 People want to start working on apps in  Rails 3.0. Rails 3 is supporting ruby 1.8.7 and ruby 1.9.2. These instructions will assist you with getting Rails 3 and ruby 1.9.2 installed. I'm tossing this up here to have something to point people to when they have questions.

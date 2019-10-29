@@ -1,7 +1,6 @@
 ---
 title: Testing, Stubs & Shoulda from Hashrocket.
-typo_id: 21
-layout: master
+date: 2009-02-23 00:00:00 -0800
 ---
 This was an interesting talk. I wouldn't mind spending a few hours with [Corey Haines](http://coreyhaines.com)
 

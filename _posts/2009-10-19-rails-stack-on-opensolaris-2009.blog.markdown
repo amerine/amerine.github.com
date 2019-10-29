@@ -1,6 +1,6 @@
 ---
 title: Rails Stack on OpenSolaris 2009.06
-layout: master
+date: 2009-10-19 00:00:00 -0800
 ---
 I enjoy using [OpenSolaris](http://opensolaris.org) when I can, and I've been using it for a couple small Ruby on Rails deployments. I've received a few questions recently about deploying Ruby on Rails app on [OpenSolaris](http://opensolaris.org), so to kill a few 'birds' with one stone. I'm throwing this post together so that I can just point them here and let them run with it.
 

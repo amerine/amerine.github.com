@@ -1,6 +1,6 @@
 ---
 title: Ruby never powered a revolution
-layout: master
+date: 2011-08-02 00:00:00 -0800
 ---
 
 I just saw a [post](http://derekneighbors.com/2011/08/ruby-is-just-a-bunch-of-tools/) in my [tweet stream](http://twitter.com/amerine) by Derek Neighbors in which he asserts that todays Rubyists are a "drone army":

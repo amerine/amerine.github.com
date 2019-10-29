@@ -1,8 +1,6 @@
 ---
 title: Torvalds Kills Unix
-typo_id: 11
-layout: master
+date: 2008-11-02 00:00:00 -0800
+featured_image: '/images/torvalds-kill-unix.png'
 ---
 Funny things happen when you play games.... They seem to mimic reality.
-
-![Torvlads Kills Unix Picture](http://amerine.net/images/torvalds-kill-unix.png "Torvlads Kills Unix Picture")

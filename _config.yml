@@ -2,6 +2,7 @@ description: Mark Turner is amerine on the internet
 title: Mark Turner
 name: Mark Turner is <i>amerine</i> on the internet
 url: "http://amerine.net"
+baseurl: amerine.net
 
 highlighter: rouge
 markdown: kramdown

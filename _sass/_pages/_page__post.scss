@@ -29,7 +29,7 @@
   }
 
   .post__content {
-    max-width: 656px;
+    max-width: 700px;
     margin-bottom: 80px;
 
     p {
@@ -173,7 +173,7 @@
 
     blockquote {
       margin: 40px 0;
-      width: calc(100vw - 60px);
+      width: calc(100vw - 20%);
       max-width: 1140px;
 
       p {

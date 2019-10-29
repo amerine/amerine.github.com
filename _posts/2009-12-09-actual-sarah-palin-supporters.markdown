@@ -1,6 +1,6 @@
 ---
 title: Actual Sarah Palin Supporters
-layout: master
+date: 2009-12-09 00:00:00 -0800
 ---
 
 I saw this over at [Giles Bowkett's Blog](http://gilesbowkett.blogspot.com/2009/12/real-palin-supporters-not-actors.html) and just had to share it here. Thanks Giles!

@@ -1,6 +1,6 @@
 ---
 title: "Thanks Ed"
-layout: master
+date: 2010-04-01 00:00:00 -0800
 ---
 ![Ed Roberts](/images/ed-roberts.jpg "Ed Roberts (1941 - 2010)")
 

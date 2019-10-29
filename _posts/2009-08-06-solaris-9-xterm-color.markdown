@@ -1,6 +1,6 @@
 ---
 title: Solaris 9 and xterm-color
-layout: master
+date: 2009-08-06 00:00:00 -0800
 ---
 If you connect to Solaris 9 from a OS X or any recent Linux box via SSH, chances are your terminal is set to xterm-color. If you try to use vi or anything you'll see an error like below:
 
