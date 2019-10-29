@@ -1,9 +1,5 @@
 ---
 title: About
-layout: master
-type: page
-navigation: true
-gradient: 		3
 image: mark-summer-2016-cropped.jpg
 ---
 
