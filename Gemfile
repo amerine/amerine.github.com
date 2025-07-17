@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '~> 3.4'
+
 gem "rake"
 gem "activesupport"
 gem "jekyll", "~> 4.0"
